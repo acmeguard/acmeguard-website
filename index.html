@@ -58,16 +58,16 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <div class="stat-number">79%</div>
+                        <div class="stat-number">79%<sup>1</sup></div>
                         <div class="stat-label">of top 1000 companies can't control who issues certificates for their domains</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">150+</div>
-                        <div class="stat-label">DNS providers supported</div>
+                        <div class="stat-number">40%<sup>2</sup></div>
+                        <div class="stat-label">of enterprise certificate footprint is Shadow IT</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">All CAs</div>
-                        <div class="stat-label">Let's Encrypt, DigiCert, Sectigo & more</div>
+                        <div class="stat-number">Zero</div>
+                        <div class="stat-label">unauthorized certificates with AcmeGuard</div>
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@
                     <ul>
                         <li>Monitor Certificate Transparency logs</li>
                         <li>Detect certificates across all CAs</li>
-                        <li>Identify rogue and shadow certificates</li>
+                        <li>Identify rogue and Shadow IT certificates</li>
                         <li>Track certificate lifecycle and expiration</li>
                     </ul>
                 </div>
@@ -321,9 +321,13 @@
                     </div>
                 </div>
             </div>
+            <div class="footer-footnotes">
+                <p><sup>1</sup> Based on AcmeGuard's analysis of CAA record implementation and multi-CA certificate issuance patterns across the top 1000 global companies and public organizations.</p>
+                <p><sup>2</sup> Based on our analysis of enterprises using multiple Certificate Authorities, where subdomain certificates are issued by different CAs than the primary domain.</p>
+            </div>
             <div class="footer-bottom">
                 <div class="footer-legal">
-                    <p>&copy; 2025 AcmeGuard B.V. All rights reserved.</p>
+                    <p>&copy; 2025 AcmeGuard BV. All rights reserved.</p>
                 </div>
                 <div class="footer-europe">
                     <span class="eu-flag">🇪🇺</span>
