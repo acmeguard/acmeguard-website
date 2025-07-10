@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcmeGuard - The unified certificate management platform</title>
+    <meta name="description" content="Complete certificate visibility across all CAs. Eliminate blind spots and gain control over your enterprise certificate landscape.">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i data-lucide="shield-check"></i>
+                    <span>AcmeGuard</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#how-it-works" class="nav-link">How It Works</a>
+                    <a href="#use-cases" class="nav-link">Use Cases</a>
+                    <button class="btn btn-primary" hx-get="/demo-modal" hx-target="#modal-container" hx-trigger="click">
+                        Book Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    The unified certificate management platform
+                </h1>
+                <p class="hero-subtitle">
+                    Complete certificate visibility across all CAs. Centralize ACME protocol handling, secure private networks without internet exposure, and eliminate certificate blind spots while keeping your free services.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary btn-large" hx-get="/demo-modal" hx-target="#modal-container" hx-trigger="click">
+                        <i data-lucide="calendar"></i>
+                        Book a Demo
+                    </button>
+                    <a href="#features" class="btn btn-secondary btn-large">
+                        <i data-lucide="arrow-down"></i>
+                        Learn More
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">79%</div>
+                        <div class="stat-label">of top 1000 companies can't control who issues certificates for their domains</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">DNS providers supported</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">All CAs</div>
+                        <div class="stat-label">Let's Encrypt, DigiCert, Sectigo & more</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Certificate Chaos Challenge</h2>
+                <p>Enterprises struggle with ungoverned ACME protocol usage and insecure internal infrastructure</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i data-lucide="eye-off"></i>
+                    </div>
+                    <h3>Ungoverned ACME Protocol</h3>
+                    <p>Anyone with domain access can request SSL certificates through ACME challenges. No central oversight of who's requesting what certificates when.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i data-lucide="shield-x"></i>
+                    </div>
+                    <h3>Insecure Internal Services</h3>
+                    <p>Internal services run without SSL or use self-signed certificates because exposing ACME validation endpoints to the internet is risky.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i data-lucide="alert-triangle"></i>
+                    </div>
+                    <h3>Certificate Sprawl</h3>
+                    <p>Multiple teams use different ACME clients and CAs without coordination, creating blind spots and compliance violations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <div class="section-header">
+                <h2>Two-Fold Solution: Watch + Enforce</h2>
+                <p>Central ACME protocol control with complete certificate visibility across all infrastructures</p>
+            </div>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i data-lucide="search"></i>
+                    </div>
+                    <h3>Watch</h3>
+                    <p><strong>Certificate Discovery Engine</strong></p>
+                    <ul>
+                        <li>Monitor Certificate Transparency logs</li>
+                        <li>Detect certificates across all CAs</li>
+                        <li>Identify rogue and shadow certificates</li>
+                        <li>Track certificate lifecycle and expiration</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3>Enforce</h3>
+                    <p><strong>Central ACME Protocol Gate</strong></p>
+                    <ul>
+                        <li>All ACME requests flow through controlled workflows</li>
+                        <li>Secure private networks without internet exposure</li>
+                        <li>Works with unmodified ACME clients</li>
+                        <li>Granular RBAC and approval workflows</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enterprise-Grade Features</h2>
+                <p>Everything you need for complete certificate governance</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="eye"></i>
+                    </div>
+                    <h3>Cross-CA Visibility</h3>
+                    <p>Monitor certificates from Let's Encrypt, DigiCert, Sectigo, ZeroSSL and more in a single dashboard.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>SSO & Teams</h3>
+                    <p>Full OIDC support with team-based access controls and delegated domain management.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="git-branch"></i>
+                    </div>
+                    <h3>Approval Workflows</h3>
+                    <p>Customizable approval processes for certificate requests with granular RBAC policies.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="terminal"></i>
+                    </div>
+                    <h3>ACME Protocol Gateway</h3>
+                    <p>Central control point for all ACME certificate requests. Works with certbot, acme.sh, cert-manager and other unmodified clients.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="bell"></i>
+                    </div>
+                    <h3>Smart Alerts</h3>
+                    <p>Proactive notifications for certificate expiration, rogue certificates, and compliance issues.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <h3>Private Network Security</h3>
+                    <p>Issue SSL certificates for internal services without exposing them to the internet. Secure api.company.com, admin.company.com and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="file-text"></i>
+                    </div>
+                    <h3>Compliance Reports</h3>
+                    <p>Detailed audit trails and compliance reporting for security and regulatory requirements.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h3>Wildcard Support</h3>
+                    <p>Single, multi-domain, and wildcard certificate support with intelligent subdomain management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>Use Cases</h2>
+                <p>How AcmeGuard solves real enterprise challenges</p>
+            </div>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i data-lucide="dollar-sign"></i>
+                    </div>
+                    <h3>Cost-Effective ACME Management</h3>
+                    <p>Keep using free ACME services like Let's Encrypt while getting enterprise-grade governance. Central control over all ACME protocol usage without per-certificate fees.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i data-lucide="network"></i>
+                    </div>
+                    <h3>Secure Private Infrastructure</h3>
+                    <p>Issue proper SSL certificates for internal services like api.company.com and admin.company.com without exposing these services to the internet for ACME validation.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">
+                        <i data-lucide="shield"></i>
+                    </div>
+                    <h3>ACME Protocol Governance</h3>
+                    <p>Centralize all ACME certificate requests across teams and CAs. Complete visibility and control over who can request certificates and when.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Simple integration with your existing infrastructure</p>
+            </div>
+            <div class="workflow-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Certificate Discovery</h3>
+                        <p>AcmeGuard continuously monitors Certificate Transparency logs to discover all certificates issued for your domains across any CA.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>ACME Protocol Gateway</h3>
+                        <p>Configure your ACME clients to route through AcmeGuard's protocol gateway. All DNS-01 challenges are handled centrally while your tools work unchanged.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Unified Management</h3>
+                        <p>Manage all certificates through the AcmeGuard portal. Set approval workflows, assign responsibilities, and track compliance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Control Your ACME Protocol Usage?</h2>
+                <p>Join enterprise teams who trust AcmeGuard for centralized ACME governance and secure private infrastructure.</p>
+                <button class="btn btn-primary btn-large" hx-get="/demo-modal" hx-target="#modal-container" hx-trigger="click">
+                    <i data-lucide="calendar"></i>
+                    Schedule Your Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i data-lucide="shield-check"></i>
+                        <span>AcmeGuard</span>
+                    </div>
+                    <p>The unified certificate management platform</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#use-cases">Use Cases</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 AcmeGuard B.V. All rights reserved.</p>
+                </div>
+                <div class="footer-europe">
+                    <span class="eu-flag">🇪🇺</span>
+                    <span>Made proudly in Europe</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Container -->
+    <div id="modal-container"></div>
+
+    <!-- Scripts -->
+    <script src="demo-modal.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
