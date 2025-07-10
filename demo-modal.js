@@ -38,7 +38,7 @@ class AcmeGuardDemo {
                     <h2>Book Your AcmeGuard Demo</h2>
                     <p style="color: var(--text-secondary); margin-bottom: var(--space-xl);">
                         See how AcmeGuard can centralize your ACME protocol usage and secure private infrastructure. 
-                        Our team will show you the platform and discuss your specific use case.
+                        Schedule a demo directly or send us your information and we'll reach out within 24 hours.
                     </p>
                     
                     <form id="demo-form" onsubmit="acmeGuardDemo.submitDemoForm(event)">
@@ -102,9 +102,13 @@ class AcmeGuardDemo {
                                 Cancel
                             </button>
                             <button type="submit" class="btn btn-primary">
-                                <i data-lucide="calendar-check"></i>
-                                Request Demo
+                                <i data-lucide="send"></i>
+                                Send Information
                             </button>
+                            <a href="https://calendly.com/juanfontalonso/acmeguard-demo" target="_blank" class="btn btn-primary" style="text-decoration: none;">
+                                <i data-lucide="calendar"></i>
+                                Schedule Demo Now
+                            </a>
                         </div>
                     </form>
                 </div>
@@ -196,20 +200,20 @@ class AcmeGuardDemo {
                     
                     <div style="background: var(--surface); padding: var(--space-xl); border-radius: 0.75rem; margin-bottom: var(--space-xl);">
                         <h3 style="margin-bottom: var(--space-md);">What's Next?</h3>
-                        <ul style="text-align: left; color: var(--text-secondary); list-style: none;">
-                            <li style="padding: var(--space-sm) 0; position: relative; padding-left: var(--space-lg);">
-                                <span style="position: absolute; left: 0; color: var(--accent); font-weight: 600;">1.</span>
-                                Our team will review your requirements
-                            </li>
-                            <li style="padding: var(--space-sm) 0; position: relative; padding-left: var(--space-lg);">
-                                <span style="position: absolute; left: 0; color: var(--accent); font-weight: 600;">2.</span>
-                                We'll reach out within 24 hours to schedule your demo
-                            </li>
-                            <li style="padding: var(--space-sm) 0; position: relative; padding-left: var(--space-lg);">
-                                <span style="position: absolute; left: 0; color: var(--accent); font-weight: 600;">3.</span>
-                                You'll see AcmeGuard in action with your use case
-                            </li>
-                        </ul>
+                                                 <ul style="text-align: left; color: var(--text-secondary); list-style: none;">
+                             <li style="padding: var(--space-sm) 0; position: relative; padding-left: var(--space-lg);">
+                                 <span style="position: absolute; left: 0; color: var(--accent); font-weight: 600;">1.</span>
+                                 Our team will review your requirements
+                             </li>
+                             <li style="padding: var(--space-sm) 0; position: relative; padding-left: var(--space-lg);">
+                                 <span style="position: absolute; left: 0; color: var(--accent); font-weight: 600;">2.</span>
+                                 We'll reach out within 24 hours to schedule your demo
+                             </li>
+                             <li style="padding: var(--space-sm) 0; position: relative; padding-left: var(--space-lg);">
+                                 <span style="position: absolute; left: 0; color: var(--accent); font-weight: 600;">3.</span>
+                                 Or <a href="https://calendly.com/juanfontalonso/acmeguard-demo" target="_blank" style="color: var(--primary);">schedule directly</a> using our calendar
+                             </li>
+                         </ul>
                     </div>
                     
                     <div>
