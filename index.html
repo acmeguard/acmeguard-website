@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AcmeGuard - The unified certificate management platform</title>
     <meta name="description" content="Complete certificate visibility across all CAs. Eliminate blind spots and gain control over your enterprise certificate landscape.">
-    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     
@@ -54,16 +54,16 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <div class="stat-number">79%<sup>1</sup></div>
+                        <div class="stat-number">79%<sup><a href="#footnote-1">1</a></sup></div>
                         <div class="stat-label">of top 1000 companies can't control who issues certificates for their domains</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">40%<sup>2</sup></div>
+                        <div class="stat-number">40%<sup><a href="#footnote-2">2</a></sup></div>
                         <div class="stat-label">of enterprise certificate footprint is Shadow IT</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">Zero</div>
-                        <div class="stat-label">unauthorized certificates with AcmeGuard</div>
+                        <div class="stat-number">47 days<sup><a href="#footnote-3">3</a></sup></div>
+                        <div class="stat-label">maximum certificate lifetime by 2029</div>
                     </div>
                 </div>
             </div>
@@ -318,8 +318,9 @@
                 </div>
             </div>
             <div class="footer-footnotes">
-                <p><sup>1</sup> Based on AcmeGuard's analysis of CAA record implementation and multi-CA certificate issuance patterns across the top 1000 global companies and public organizations.</p>
-                <p><sup>2</sup> Based on our analysis of enterprises using multiple Certificate Authorities, where subdomain certificates are issued by different CAs than the primary domain.</p>
+                <p id="footnote-1"><sup>1</sup> Based on AcmeGuard's analysis of CAA record implementation and multi-CA certificate issuance patterns across the top 1000 global companies and public organizations.</p>
+                <p id="footnote-2"><sup>2</sup> Based on our analysis of enterprises using multiple Certificate Authorities, where subdomain certificates are issued by different CAs than the primary domain.</p>
+                <p id="footnote-3"><sup>3</sup> The CA/Browser Forum has officially voted to progressively reduce TLS certificate lifetimes from 398 days today to 47 days by 2029, making ACME protocol automation essential for enterprise certificate management.</p>
             </div>
             <div class="footer-bottom">
                 <div class="footer-legal">
