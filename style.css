@@ -766,4 +766,303 @@ h4 { font-size: 1.25rem; }
 /* Smooth Scroll */
 html {
     scroll-behavior: smooth;
+}
+
+/* Pricing Page Styles */
+.pricing-hero {
+    padding: 8rem 0 4rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    text-align: center;
+}
+
+.pricing-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pricing-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Pricing Philosophy */
+.pricing-philosophy {
+    padding: var(--space-3xl) 0;
+    background: var(--background);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+}
+
+.philosophy-card {
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--surface);
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+}
+
+.philosophy-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-lg);
+    color: white;
+}
+
+.philosophy-icon i {
+    width: 32px;
+    height: 32px;
+}
+
+/* Early Stage Section */
+.early-stage {
+    padding: var(--space-3xl) 0;
+    background: var(--surface);
+}
+
+.early-stage-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--accent);
+    color: white;
+    border-radius: 2rem;
+    font-weight: 500;
+    margin-bottom: var(--space-xl);
+}
+
+.early-stage-badge i {
+    width: 16px;
+    height: 16px;
+}
+
+.early-stage-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.early-stage-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+    text-align: left;
+}
+
+.benefit-item {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+}
+
+.benefit-item i {
+    width: 60px !important;
+    height: 60px !important;
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: var(--space-xs);
+}
+
+.benefit-item svg {
+    width: 60px !important;
+    height: 60px !important;
+    color: var(--accent);
+}
+
+/* Pricing Cards */
+.pricing-preview {
+    padding: var(--space-3xl) 0;
+    background: var(--background);
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+}
+
+.pricing-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary);
+    transform: scale(1.05);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--primary);
+    color: white;
+    padding: var(--space-sm) var(--space-lg);
+    border-bottom-left-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.pricing-header {
+    padding: var(--space-xl) var(--space-xl) var(--space-lg);
+    text-align: center;
+}
+
+.pricing-header h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.pricing-header p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.pricing-body {
+    padding: 0 var(--space-xl) var(--space-xl);
+}
+
+.price-placeholder {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.price-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+}
+
+.price-note {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
+    color: var(--text-secondary);
+}
+
+.feature-list i {
+    width: 16px;
+    height: 16px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.pricing-note {
+    margin-top: var(--space-2xl);
+    text-align: center;
+    padding: var(--space-lg);
+    background: var(--surface);
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+}
+
+/* Pricing CTA */
+.pricing-cta {
+    padding: var(--space-3xl) 0;
+    background: var(--surface);
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+/* Pricing FAQ */
+.pricing-faq {
+    padding: var(--space-3xl) 0;
+    background: var(--background);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+}
+
+.faq-item {
+    padding: var(--space-xl);
+    background: var(--surface);
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+}
+
+.faq-item h3 {
+    margin-bottom: var(--space-md);
+    color: var(--primary);
+}
+
+.faq-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Responsive Pricing */
+@media (max-width: 768px) {
+    .pricing-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .early-stage-benefits {
+        grid-template-columns: 1fr;
+    }
+    
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
 } 

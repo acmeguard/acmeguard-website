@@ -38,7 +38,7 @@ class AcmeGuardDemo {
                     <h2>Book Your AcmeGuard Demo</h2>
                     <p style="color: var(--text-secondary); margin-bottom: var(--space-xl);">
                         See how AcmeGuard can centralize your ACME protocol usage and secure private infrastructure. 
-                        Schedule a demo directly or send us your information and we'll reach out within 24 hours.
+                        Schedule a demo directly, send us your information, or email us at <a href="mailto:sales@acmeguard.io" style="color: var(--primary);">sales@acmeguard.io</a>.
                     </p>
                     
                     <form id="demo-form" onsubmit="acmeGuardDemo.submitDemoForm(event)">
@@ -211,7 +211,7 @@ class AcmeGuardDemo {
                              </li>
                              <li style="padding: var(--space-sm) 0; position: relative; padding-left: var(--space-lg);">
                                  <span style="position: absolute; left: 0; color: var(--accent); font-weight: 600;">3.</span>
-                                 Or <a href="https://calendly.com/juanfontalonso/acmeguard-demo" target="_blank" style="color: var(--primary);">schedule directly</a> using our calendar
+                                 Or <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" style="color: var(--primary);">schedule directly</a> or email <a href="mailto:sales@acmeguard.io" style="color: var(--primary);">sales@acmeguard.io</a>
                              </li>
                          </ul>
                     </div>
