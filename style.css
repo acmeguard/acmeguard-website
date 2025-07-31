@@ -967,6 +967,22 @@ html {
     color: var(--text-secondary);
 }
 
+.price-annual {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: block;
+    margin-top: var(--space-xs);
+}
+
+.scale-note {
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    background: var(--surface-dark);
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
 .feature-list {
     list-style: none;
 }
@@ -993,6 +1009,35 @@ html {
     background: var(--surface);
     border-radius: 0.75rem;
     border: 1px solid var(--border);
+}
+
+.pricing-principles {
+    margin-top: var(--space-2xl);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+}
+
+.principle-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--surface);
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+}
+
+.principle-item i {
+    width: 20px;
+    height: 20px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.principle-item span {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
 }
 
 /* Pricing CTA */
@@ -1064,5 +1109,15 @@ html {
     
     .philosophy-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .pricing-principles {
+        grid-template-columns: 1fr;
+    }
+    
+    .principle-item {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-sm);
     }
 } 
