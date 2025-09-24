@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Chaos Quiz - How Many Pain Points Do You Have?</title>
+    <meta name="description" content="Take our interactive quiz to discover how many certificate management challenges you're facing. Get your certificate chaos score!">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i data-lucide="shield-check"></i>
+                    <span>AcmeGuard</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#features" class="nav-link">Features</a>
+                    <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                    <a href="index.html#use-cases" class="nav-link">Use Cases</a>
+                    <a href="quiz.html" class="nav-link nav-link-active">Quiz</a>
+                    <a href="why.html" class="nav-link">Why</a>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" class="btn btn-primary" style="text-decoration: none;">
+                        Book Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Certificate Chaos Quiz 🎯
+                </h1>
+                <p class="hero-subtitle">
+                    How many certificate management challenges are you dealing with? 
+                    Check off the pain points you've experienced and get your chaos score!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <div class="quiz-container">
+                <div class="quiz-items">
+                    <div class="quiz-item">
+                        <label class="quiz-checkbox">
+                            <input type="checkbox" data-point="acme-automation">
+                            <span class="checkmark"></span>
+                            <div class="quiz-content">
+                                <h4>You need ACME automation but can't expose internal services</h4>
+                                <p>Certificates are getting shorter lifetimes, but your internal APIs can't be reached from the internet for ACME validation</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <label class="quiz-checkbox">
+                            <input type="checkbox" data-point="domain-blindspots">
+                            <span class="checkmark"></span>
+                            <div class="quiz-content">
+                                <h4>You don't know all the domains your organization exposes</h4>
+                                <p>Teams are spinning up services and you discover them during security audits or when they break</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <label class="quiz-checkbox">
+                            <input type="checkbox" data-point="private-ca-pain">
+                            <span class="checkmark"></span>
+                            <div class="quiz-content">
+                                <h4>Private CA distribution is a nightmare</h4>
+                                <p>Managing trust stores, handling revocation, and getting all clients to accept your internal CA</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <label class="quiz-checkbox">
+                            <input type="checkbox" data-point="expiration-downtime">
+                            <span class="checkmark"></span>
+                            <div class="quiz-content">
+                                <h4>You've had downtime from expired certificates</h4>
+                                <p>That 3 AM wake-up call because someone forgot to renew and your API is down</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <label class="quiz-checkbox">
+                            <input type="checkbox" data-point="shadow-it">
+                            <span class="checkmark"></span>
+                            <div class="quiz-content">
+                                <h4>Shadow IT is using different CAs and processes</h4>
+                                <p>Teams using Let's Encrypt, ZeroSSL, cloud CAs - each with different renewal approaches</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <label class="quiz-checkbox">
+                            <input type="checkbox" data-point="genai-risk">
+                            <span class="checkmark"></span>
+                            <div class="quiz-content">
+                                <h4>AI tools are making it too easy to expose services</h4>
+                                <p>GitHub Copilot helps developers create and deploy services faster than governance can keep up</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <label class="quiz-checkbox">
+                            <input type="checkbox" data-point="compliance-gaps">
+                            <span class="checkmark"></span>
+                            <div class="quiz-content">
+                                <h4>Auditors want certificate inventories you don't have</h4>
+                                <p>You're building spreadsheets from multiple sources for SOC 2, ISO 27001, or PCI compliance</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <label class="quiz-checkbox">
+                            <input type="checkbox" data-point="pricing-pain">
+                            <span class="checkmark"></span>
+                            <div class="quiz-content">
+                                <h4>Per-certificate pricing discourages security best practices</h4>
+                                <p>You're rationing certificates based on budget instead of using them where they make sense</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <label class="quiz-checkbox">
+                            <input type="checkbox" data-point="team-chaos">
+                            <span class="checkmark"></span>
+                            <div class="quiz-content">
+                                <h4>Teams manage certificates differently with no coordination</h4>
+                                <p>DevOps, Security, and Platform teams all have their own tools and processes</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="quiz-results" id="quiz-results" style="display: none;">
+                    <div class="score-display">
+                        <div class="score-number">
+                            <span id="score">0</span><span>/9</span>
+                        </div>
+                        <div class="score-text" id="score-text">
+                            Let's see how you score...
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-cta">
+                        <h3 id="cta-title">Ready to solve these challenges?</h3>
+                        <p id="cta-text">AcmeGuard addresses all of these pain points with centralized ACME governance.</p>
+                        <div class="quiz-actions">
+                            <a href="why.html" class="btn btn-secondary btn-large" style="text-decoration: none; margin-right: 1rem;">
+                                <i data-lucide="info"></i>
+                                Learn More About These Challenges
+                            </a>
+                            <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" class="btn btn-primary btn-large" style="text-decoration: none;">
+                                <i data-lucide="calendar"></i>
+                                Book Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i data-lucide="shield-check"></i>
+                        <span>AcmeGuard</span>
+                    </div>
+                    <p>The unified certificate management platform</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="index.html#features">Features</a></li>
+                            <li><a href="index.html#use-cases">Use Cases</a></li>
+                            <li><a href="index.html#how-it-works">How It Works</a></li>
+                            <li><a href="quiz.html">Quiz</a></li>
+                            <li><a href="why.html">Why</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:sales@acmeguard.io">Get in Touch</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 AcmeGuard BV. All rights reserved.</p>
+                </div>
+                <div class="footer-europe">
+                    <span class="eu-flag">🇪🇺</span>
+                    <span>Proudly made in Europe</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Quiz functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.quiz-checkbox input[type="checkbox"]');
+            const resultsDiv = document.getElementById('quiz-results');
+            const scoreElement = document.getElementById('score');
+            const scoreTextElement = document.getElementById('score-text');
+            const ctaTitleElement = document.getElementById('cta-title');
+            const ctaTextElement = document.getElementById('cta-text');
+            
+            const scoreMessages = {
+                0: {
+                    text: "Lucky you! 🍀",
+                    title: "Your certificate management is solid!",
+                    cta: "Maybe you know someone who isn't as fortunate? AcmeGuard helps teams tackle these common challenges."
+                },
+                1: {
+                    text: "Not bad! 👍",
+                    title: "One pain point is manageable",
+                    cta: "AcmeGuard can help you solve this challenge and prevent others from creeping up."
+                },
+                2: {
+                    text: "Getting interesting... 🤔",
+                    title: "A couple of challenges to tackle",
+                    cta: "These issues tend to compound. AcmeGuard addresses both of these pain points systematically."
+                },
+                3: {
+                    text: "Houston, we have problems 🚨",
+                    title: "Certificate chaos is setting in",
+                    cta: "Three pain points suggest you need centralized governance. AcmeGuard was built for exactly this scenario."
+                },
+                4: {
+                    text: "This is getting serious 😬",
+                    title: "Your certificate landscape needs help",
+                    cta: "Four challenges indicate systematic issues. AcmeGuard provides the unified platform you need."
+                },
+                5: {
+                    text: "Certificate management nightmare! 😱",
+                    title: "You're dealing with major governance gaps",
+                    cta: "Five pain points mean you're spending too much time on certificate firefighting. Let's fix this."
+                },
+                6: {
+                    text: "This is why AcmeGuard exists! 🎯",
+                    title: "You're our ideal customer",
+                    cta: "Six challenges means you understand the problem deeply. We should definitely talk."
+                },
+                7: {
+                    text: "Certificate chaos champion! 🏆",
+                    title: "You've seen it all",
+                    cta: "Seven pain points! You could probably write our marketing copy. Let's solve these together."
+                },
+                8: {
+                    text: "Certificate management survivor! 💪",
+                    title: "You deserve a medal",
+                    cta: "Eight challenges means you've been through certificate hell. AcmeGuard will feel like salvation."
+                },
+                9: {
+                    text: "BINGO! Full house! 🎰",
+                    title: "You've experienced the complete certificate nightmare",
+                    cta: "All nine pain points? You NEED AcmeGuard. This is exactly why we built it. Let's talk immediately."
+                }
+            };
+            
+            function updateQuiz() {
+                const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+                
+                if (checkedCount > 0) {
+                    resultsDiv.style.display = 'block';
+                    scoreElement.textContent = checkedCount;
+                    
+                    const message = scoreMessages[checkedCount];
+                    scoreTextElement.textContent = message.text;
+                    ctaTitleElement.textContent = message.title;
+                    ctaTextElement.textContent = message.cta;
+                } else {
+                    resultsDiv.style.display = 'none';
+                }
+            }
+            
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateQuiz);
+            });
+        });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-48VVEDE67J"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-48VVEDE67J');
+    </script>
+</body>
+</html>
