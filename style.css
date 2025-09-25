@@ -1,3 +1,11 @@
+/* Custom Font */
+@font-face {
+    font-family: 'Avant Garde';
+    src: url('./assets/fonts/ITC Avant Garde Gothic LT Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-display: swap;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -15,7 +23,7 @@
     --background: #ffffff;
     --surface: #f8fafc;
     --surface-dark: #f1f5f9;
-    --text-primary: #0f172a;
+    --text-primary: #0f172a;    
     --text-secondary: #475569;
     --text-muted: #64748b;
     --border: #e2e8f0;
@@ -183,6 +191,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .hero-title {
+    font-family: 'Avant Garde', var(--font-sans);
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: var(--space-lg);
@@ -190,7 +199,14 @@ h4 { font-size: 1.25rem; }
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    line-height: 1.1;
+    line-height: 1.3;
+    display: inline-block;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    padding: 2px 0;
 }
 
 .hero-subtitle {
@@ -306,6 +322,10 @@ h4 { font-size: 1.25rem; }
 }
 
 .section-header h2 {
+    font-family: 'Avant Garde', var(--font-sans);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
     margin-bottom: var(--space-md);
 }
 
@@ -620,6 +640,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .why-card h3 {
+    font-family: 'Avant Garde', var(--font-sans);
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -695,6 +716,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .quiz-header h2 {
+    font-family: 'Avant Garde', var(--font-sans);
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -783,6 +805,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .quiz-content h4 {
+    font-family: 'Avant Garde', var(--font-sans);
     font-size: 1.125rem;
     font-weight: 600;
     color: var(--text-primary);
