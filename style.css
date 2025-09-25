@@ -157,6 +157,7 @@ h4 { font-size: 1.25rem; }
     font-weight: 700;
     font-size: 1.25rem;
     color: var(--primary);
+    text-decoration: none;
 }
 
 .logo i {
@@ -1578,6 +1579,7 @@ html {
 }
 
 .pricing-hero-content h1 {
+    font-family: 'Avant Garde', var(--font-sans);
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: var(--space-lg);
@@ -1740,6 +1742,7 @@ html {
 }
 
 .pricing-header h3 {
+    font-family: 'Avant Garde', var(--font-sans);
     margin-bottom: var(--space-sm);
 }
 
