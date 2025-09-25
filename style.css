@@ -1371,12 +1371,6 @@ html {
     border-radius: var(--radius-lg);
     border: 1px solid var(--border);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.argument-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .argument-card h4 {
@@ -1444,7 +1438,7 @@ html {
 .developer-cta {
     margin-top: var(--space-xl);
     padding: var(--space-lg);
-    background: var(--primary-light);
+    background: var(--primary);
     border-radius: var(--radius-md);
     text-align: center;
 }
@@ -1452,8 +1446,19 @@ html {
 .developer-cta p {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: white;
     margin-bottom: var(--space-md);
+}
+
+.developer-cta .btn {
+    background: white;
+    color: var(--primary);
+    border: 2px solid white;
+}
+
+.developer-cta .btn:hover {
+    background: var(--surface-light);
+    color: var(--primary-dark);
 }
 
 @media (max-width: 768px) {
