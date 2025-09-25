@@ -175,6 +175,17 @@
                     
                     <div class="quiz-item">
                         <label class="quiz-checkbox">
+                            <input type="checkbox" data-point="wildcard-shortcut">
+                            <span class="checkmark"></span>
+                            <div class="quiz-content">
+                                <h4>You rely on wildcard certificates to keep things simple</h4>
+                                <p>One *.company.com certificate for everything - easier to manage but harder to track what's actually using it, when it needs renewal, and you're making it very simple for any attacker too 😉</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <label class="quiz-checkbox">
                             <input type="checkbox" data-point="genai-security-gap">
                             <span class="checkmark"></span>
                             <div class="quiz-content">
@@ -207,7 +218,7 @@
             <div class="sticky-footer-content">
                 <div class="sticky-score">
                             <div class="sticky-score-number">
-                                <span id="sticky-score">0</span><span>/12</span>
+                                <span id="sticky-score">0</span><span>/13</span>
                             </div>
                     <div class="sticky-score-text" id="sticky-score-text">
                         Certificate Chaos Score
@@ -329,7 +340,8 @@
                   9: "Almost full chaos - you need help NOW! 🔥",
                   10: "Certificate management clusterf*ck! 💥",
                   11: "Nearly FULL BINGO! You NEED AcmeGuard! 🎰",
-                  12: "FULL BINGO! You NEED AcmeGuard immediately! 🎰"
+                  12: "FULL BINGO! You NEED AcmeGuard immediately! 🎰",
+                  13: "PERFECT BINGO! You're our dream customer! 🏆"
               };
             
             function updateQuiz() {

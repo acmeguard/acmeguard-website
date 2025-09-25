@@ -433,10 +433,9 @@ h4 { font-size: 1.25rem; }
     }
 }
     
-    .footer-footnotes {
-        padding: var(--space-lg) 0;
-        text-align: center;
-    }
+.footer-footnotes {
+    padding: var(--space-lg) 0;
+    text-align: center;
 }
 
 /* Section Headers */
@@ -1603,6 +1602,12 @@ html {
     background: var(--background);
 }
 
+.pricing-philosophy h2 {
+    font-family: 'Avant Garde', var(--font-sans);
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
 .philosophy-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1616,6 +1621,10 @@ html {
     background: var(--surface);
     border-radius: 1rem;
     border: 1px solid var(--border);
+}
+
+.philosophy-card h3 {
+    font-family: 'Avant Garde', var(--font-sans);
 }
 
 .philosophy-icon {
@@ -1664,6 +1673,10 @@ html {
     margin: 0 auto;
 }
 
+.early-stage h2 {
+    font-family: 'Avant Garde', var(--font-sans);
+}
+
 .early-stage-benefits {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1690,6 +1703,10 @@ html {
     width: 60px !important;
     height: 60px !important;
     color: var(--accent);
+}
+
+.benefit-item h4 {
+    font-family: 'Avant Garde', var(--font-sans);
 }
 
 /* Pricing Cards */
@@ -1852,6 +1869,10 @@ html {
     text-align: center;
 }
 
+.pricing-cta h2 {
+    font-family: 'Avant Garde', var(--font-sans);
+}
+
 .cta-buttons {
     display: flex;
     justify-content: center;
@@ -1863,6 +1884,10 @@ html {
 .pricing-faq {
     padding: var(--space-3xl) 0;
     background: var(--background);
+}
+
+.pricing-faq .section-header h2 {
+    font-family: 'Avant Garde', var(--font-sans);
 }
 
 .faq-grid {
@@ -1880,6 +1905,7 @@ html {
 }
 
 .faq-item h3 {
+    font-family: 'Avant Garde', var(--font-sans);
     margin-bottom: var(--space-md);
     color: var(--primary);
 }
