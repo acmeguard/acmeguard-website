@@ -355,6 +355,18 @@ h4 { font-size: 1.25rem; }
         padding: 6rem 0 1rem;
     }
     
+    .section-header h2 {
+        font-size: 2rem;
+        padding: 0 var(--space-sm);
+        text-align: center;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+        padding: 0 var(--space-sm);
+        text-align: center;
+    }
+    
     .hero-title {
         font-size: 2.2rem;
         padding: 0 var(--space-sm);
@@ -429,6 +441,8 @@ h4 { font-size: 1.25rem; }
 .section-header {
     text-align: center;
     margin-bottom: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+    width: 100%;
 }
 
 .section-header h2 {
@@ -437,6 +451,8 @@ h4 { font-size: 1.25rem; }
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: var(--space-md);
+    text-align: center;
+    width: 100%;
 }
 
 .section-header p {
@@ -444,6 +460,8 @@ h4 { font-size: 1.25rem; }
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
+    text-align: center;
+    padding: 0 var(--space-lg) var(--space-xl) var(--space-lg);
 }
 
 /* Problem Section */
