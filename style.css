@@ -685,20 +685,20 @@ h4 { font-size: 1.25rem; }
 
 /* Quiz Styles */
 .quiz-section {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-2xl) 0;
     background: linear-gradient(135deg, var(--surface) 0%, var(--surface-dark) 100%);
 }
 
 .quiz-header {
     text-align: center;
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-md);
 }
 
 .quiz-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
 }
 
 .quiz-header p {
@@ -713,8 +713,8 @@ h4 { font-size: 1.25rem; }
 
 .quiz-items {
     display: grid;
-    gap: var(--space-md);
-    margin-bottom: var(--space-2xl);
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
 }
 
 .quiz-item {
@@ -734,7 +734,7 @@ h4 { font-size: 1.25rem; }
 .quiz-checkbox {
     display: flex;
     align-items: flex-start;
-    padding: var(--space-lg);
+    padding: var(--space-md);
     cursor: pointer;
     gap: var(--space-md);
     width: 100%;
@@ -870,6 +870,120 @@ h4 { font-size: 1.25rem; }
     
     .score-number span:last-child {
         font-size: 2rem;
+    }
+}
+
+/* Sticky Quiz Footer */
+.quiz-sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--background);
+    border-top: 2px solid var(--primary);
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: var(--space-lg) 0;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.sticky-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+}
+
+.sticky-score {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.sticky-score-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.sticky-score-number span:last-child {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+}
+
+.sticky-score-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sticky-message {
+    flex: 1;
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: center;
+}
+
+.sticky-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.sticky-actions .btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.9rem;
+}
+
+/* Responsive sticky footer */
+@media (max-width: 768px) {
+    .sticky-footer-content {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+    
+    .sticky-score {
+        justify-content: center;
+    }
+    
+    .sticky-message {
+        font-size: 0.9rem;
+    }
+    
+    .sticky-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .sticky-actions .btn {
+        margin: 0 var(--space-xs);
+    }
+}
+
+/* Add bottom padding to body when sticky footer is visible */
+body.quiz-sticky-active {
+    padding-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+    body.quiz-sticky-active {
+        padding-bottom: 180px;
     }
 }
 

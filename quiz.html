@@ -48,8 +48,8 @@
                     Certificate Chaos Quiz 🎯
                 </h1>
                 <p class="hero-subtitle">
-                    How many certificate management challenges are you dealing with? 
-                    Check off the pain points you've experienced and get your chaos score!
+                    How many certificate problems do you have? 
+                    Check the ones you've experienced and get your chaos score!
                 </p>
             </div>
         </div>
@@ -62,33 +62,33 @@
                 <div class="quiz-items">
                     <div class="quiz-item">
                         <label class="quiz-checkbox">
-                            <input type="checkbox" data-point="acme-automation">
+                            <input type="checkbox" data-point="self-signed-certs">
                             <span class="checkmark"></span>
                             <div class="quiz-content">
-                                <h4>You need ACME automation but can't expose internal services</h4>
-                                <p>Certificates are getting shorter lifetimes, but your internal APIs can't be reached from the internet for ACME validation</p>
+                                <h4>You still use self-signed certificates for internal services</h4>
+                                <p>Your internal APIs, admin panels, and microservices run with self-signed certs because "it's just internal"</p>
                             </div>
                         </label>
                     </div>
                     
                     <div class="quiz-item">
                         <label class="quiz-checkbox">
-                            <input type="checkbox" data-point="domain-blindspots">
+                            <input type="checkbox" data-point="private-ca-nightmare">
                             <span class="checkmark"></span>
                             <div class="quiz-content">
-                                <h4>You don't know all the domains your organization exposes</h4>
-                                <p>Teams are spinning up services and you discover them during security audits or when they break</p>
+                                <h4>You have a private CA but root certificate distribution is a pain</h4>
+                                <p>Getting all your devices, containers, and services to trust your CA is hard work</p>
                             </div>
                         </label>
                     </div>
                     
                     <div class="quiz-item">
                         <label class="quiz-checkbox">
-                            <input type="checkbox" data-point="private-ca-pain">
+                            <input type="checkbox" data-point="internal-cert-dream">
                             <span class="checkmark"></span>
                             <div class="quiz-content">
-                                <h4>Private CA distribution is a nightmare</h4>
-                                <p>Managing trust stores, handling revocation, and getting all clients to accept your internal CA</p>
+                                <h4>You want real certificates for internal services</h4>
+                                <p>What if api.company.com and admin.company.com had proper certificates without all the work?</p>
                             </div>
                         </label>
                     </div>
@@ -106,22 +106,33 @@
                     
                     <div class="quiz-item">
                         <label class="quiz-checkbox">
-                            <input type="checkbox" data-point="shadow-it">
+                            <input type="checkbox" data-point="validity-period-concern">
                             <span class="checkmark"></span>
                             <div class="quiz-content">
-                                <h4>Shadow IT is using different CAs and processes</h4>
-                                <p>Teams using Let's Encrypt, ZeroSSL, cloud CAs - each with different renewal approaches</p>
+                                <h4>The CA/Browser Forum is making certificate lifetimes much shorter</h4>
+                                <p>New rules: 200 days (March 2026), 100 days (March 2027), 47 days (2029). Manual renewal won't work - you need automation now.</p>
                             </div>
                         </label>
                     </div>
                     
                     <div class="quiz-item">
                         <label class="quiz-checkbox">
-                            <input type="checkbox" data-point="genai-risk">
+                            <input type="checkbox" data-point="domain-blindspots">
                             <span class="checkmark"></span>
                             <div class="quiz-content">
-                                <h4>AI tools are making it too easy to expose services</h4>
-                                <p>GitHub Copilot helps developers create and deploy services faster than governance can keep up</p>
+                                <h4>You don't know all the domains your organization exposes</h4>
+                                <p>Teams are spinning up services and you discover them during security audits or when they break</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <label class="quiz-checkbox">
+                            <input type="checkbox" data-point="shadow-it">
+                            <span class="checkmark"></span>
+                            <div class="quiz-content">
+                                <h4>Shadow IT is using different CAs and processes</h4>
+                                <p>Teams using Let's Encrypt, ZeroSSL, cloud CAs - each with different renewal approaches</p>
                             </div>
                         </label>
                     </div>
@@ -139,11 +150,22 @@
                     
                     <div class="quiz-item">
                         <label class="quiz-checkbox">
-                            <input type="checkbox" data-point="pricing-pain">
+                            <input type="checkbox" data-point="enterprise-ca-pricing">
                             <span class="checkmark"></span>
                             <div class="quiz-content">
-                                <h4>Per-certificate pricing discourages security best practices</h4>
-                                <p>You're rationing certificates based on budget instead of using them where they make sense</p>
+                                <h4>You use an enterprise CA, paying per certificate with no real added value</h4>
+                                <p>Why pay $50-200 per certificate when Let's Encrypt is free and just as trusted?</p>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <label class="quiz-checkbox">
+                            <input type="checkbox" data-point="genai-security-gap">
+                            <span class="checkmark"></span>
+                            <div class="quiz-content">
+                                <h4>GenAI tools make it easy to create services without security considerations</h4>
+                                <p>Copilot, Cursor, and other AI tools help developers build and deploy fast, but skip the security planning for exposing services</p>
                             </div>
                         </label>
                     </div>
@@ -153,49 +175,46 @@
                             <input type="checkbox" data-point="team-chaos">
                             <span class="checkmark"></span>
                             <div class="quiz-content">
-                                <h4>Teams manage certificates differently with no coordination</h4>
-                                <p>DevOps, Security, and Platform teams all have their own tools and processes</p>
+                                <h4>Teams manage certificates in different ways with no coordination</h4>
+                                <p>DevOps, Security, and Platform teams all use different tools and processes</p>
                             </div>
                         </label>
                     </div>
                 </div>
                 
-                <div class="quiz-results" id="quiz-results" style="display: none;">
-                    <div class="score-display">
-                        <div class="score-number">
-                            <span id="score">0</span><span>/9</span>
-                        </div>
-                        <div class="score-text" id="score-text">
-                            Let's see how you score...
-                        </div>
-                    </div>
-                    
-                    <div class="quiz-cta">
-                        <h3 id="cta-title">Ready to solve these challenges?</h3>
-                        <p id="cta-text">AcmeGuard addresses all of these pain points with centralized ACME governance.</p>
-                        <div class="quiz-actions">
-                            <a href="why.html" class="btn btn-secondary btn-large" style="text-decoration: none; margin-right: 1rem;">
-                                <i data-lucide="info"></i>
-                                Learn More About These Challenges
-                            </a>
-                            <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" class="btn btn-primary btn-large" style="text-decoration: none;">
-                                <i data-lucide="calendar"></i>
-                                Book Demo
-                            </a>
-                        </div>
-                        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border);">
-                            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                                Want to dive deeper into each challenge? 
-                                <a href="why.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">
-                                    Read the full breakdown on our Why page →
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Results will show in sticky footer -->
             </div>
         </div>
     </section>
+
+    <!-- Sticky Quiz Results Footer -->
+    <div class="quiz-sticky-footer" id="quiz-sticky-footer" style="display: none;">
+        <div class="container">
+            <div class="sticky-footer-content">
+                <div class="sticky-score">
+                        <div class="sticky-score-number">
+                            <span id="sticky-score">0</span><span>/11</span>
+                        </div>
+                    <div class="sticky-score-text" id="sticky-score-text">
+                        Certificate Chaos Score
+                    </div>
+                </div>
+                <div class="sticky-message" id="sticky-message">
+                    Keep checking items to see your results!
+                </div>
+                <div class="sticky-actions">
+                    <a href="why.html" class="btn btn-secondary" style="text-decoration: none; margin-right: 1rem;">
+                        <i data-lucide="info"></i>
+                        Learn More
+                    </a>
+                    <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" class="btn btn-primary" style="text-decoration: none;">
+                        <i data-lucide="calendar"></i>
+                        Book Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -248,78 +267,40 @@
         // Quiz functionality
         document.addEventListener('DOMContentLoaded', function() {
             const checkboxes = document.querySelectorAll('.quiz-checkbox input[type="checkbox"]');
-            const resultsDiv = document.getElementById('quiz-results');
-            const scoreElement = document.getElementById('score');
-            const scoreTextElement = document.getElementById('score-text');
-            const ctaTitleElement = document.getElementById('cta-title');
-            const ctaTextElement = document.getElementById('cta-text');
+            const stickyFooter = document.getElementById('quiz-sticky-footer');
+            const stickyScore = document.getElementById('sticky-score');
+            const stickyMessage = document.getElementById('sticky-message');
             
             const scoreMessages = {
-                0: {
-                    text: "Lucky you! 🍀",
-                    title: "Your certificate management is solid!",
-                    cta: "Maybe you know someone who isn't as fortunate? AcmeGuard helps teams tackle these common challenges."
-                },
-                1: {
-                    text: "Not bad! 👍",
-                    title: "One pain point is manageable",
-                    cta: "AcmeGuard can help you solve this challenge and prevent others from creeping up."
-                },
-                2: {
-                    text: "Getting interesting... 🤔",
-                    title: "A couple of challenges to tackle",
-                    cta: "These issues tend to compound. AcmeGuard addresses both of these pain points systematically."
-                },
-                3: {
-                    text: "Houston, we have problems 🚨",
-                    title: "Certificate chaos is setting in",
-                    cta: "Three pain points suggest you need centralized governance. AcmeGuard was built for exactly this scenario."
-                },
-                4: {
-                    text: "This is getting serious 😬",
-                    title: "Your certificate landscape needs help",
-                    cta: "Four challenges indicate systematic issues. AcmeGuard provides the unified platform you need."
-                },
-                5: {
-                    text: "Certificate management nightmare! 😱",
-                    title: "You're dealing with major governance gaps",
-                    cta: "Five pain points mean you're spending too much time on certificate firefighting. Let's fix this."
-                },
-                6: {
-                    text: "This is why AcmeGuard exists! 🎯",
-                    title: "You're our ideal customer",
-                    cta: "Six challenges means you understand the problem deeply. We should definitely talk."
-                },
-                7: {
-                    text: "Certificate chaos champion! 🏆",
-                    title: "You've seen it all",
-                    cta: "Seven pain points! You could probably write our marketing copy. Let's solve these together."
-                },
-                8: {
-                    text: "Certificate management survivor! 💪",
-                    title: "You deserve a medal",
-                    cta: "Eight challenges means you've been through certificate hell. AcmeGuard will feel like salvation."
-                },
-                9: {
-                    text: "BINGO! Full house! 🎰",
-                    title: "You've experienced the complete certificate nightmare",
-                    cta: "All nine pain points? You NEED AcmeGuard. This is exactly why we built it. Let's talk immediately."
-                }
+                0: "Keep checking items to see your results!",
+                1: "One governance gap - manageable for now 👍",
+                2: "Certificate sprawl is starting 🤔",
+                3: "You need centralized ACME governance 🚨", 
+                4: "Serious certificate management gaps 😬",
+                5: "Major governance breakdown - time to act! 😱",
+                6: "You're our perfect customer - let's talk! 🎯",
+                7: "Certificate chaos expert - we should hire you! 🏆",
+                8: "You've survived certificate hell 💪",
+                9: "Almost full chaos - you need help NOW! 🔥",
+                10: "Certificate management disaster zone! 💥",
+                11: "FULL BINGO! You NEED AcmeGuard immediately! 🎰"
             };
             
             function updateQuiz() {
                 const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
                 
                 if (checkedCount > 0) {
-                    resultsDiv.style.display = 'block';
-                    scoreElement.textContent = checkedCount;
+                    // Show sticky footer
+                    stickyFooter.style.display = 'block';
+                    document.body.classList.add('quiz-sticky-active');
                     
-                    const message = scoreMessages[checkedCount];
-                    scoreTextElement.textContent = message.text;
-                    ctaTitleElement.textContent = message.title;
-                    ctaTextElement.textContent = message.cta;
+                    // Update score and message
+                    stickyScore.textContent = checkedCount;
+                    stickyMessage.textContent = scoreMessages[checkedCount];
                 } else {
-                    resultsDiv.style.display = 'none';
+                    // Hide sticky footer
+                    stickyFooter.style.display = 'none';
+                    document.body.classList.remove('quiz-sticky-active');
                 }
             }
             

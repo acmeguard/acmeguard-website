@@ -48,8 +48,8 @@
                     Why AcmeGuard?
                 </h1>
                 <p class="hero-subtitle">
-                    If any of these certificate management challenges sound familiar, 
-                    you need centralized ACME protocol governance and complete certificate visibility.
+                    If any of these certificate problems sound familiar, 
+                    you need centralized ACME control and complete certificate visibility.
                 </p>
             </div>
         </div>
@@ -60,33 +60,20 @@
     <section class="why">
         <div class="container">
             <div class="section-header">
-                <h2>The Details Behind Each Challenge</h2>
-                <p>Want to dive deeper? Here's the full breakdown of each certificate management pain point:</p>
+                <h2>The Details Behind Each Problem</h2>
+                <p>Want to know more? Here's the full breakdown of each certificate problem:</p>
             </div>
             <div class="why-grid">
                 <div class="why-card">
                     <div class="why-icon">
-                        <i data-lucide="clock"></i>
+                        <i data-lucide="server"></i>
                     </div>
-                    <h3>ACME Automation is Essential</h3>
-                    <p>Certificate lifetimes are shrinking to 47 days by 2029. Manual renewal isn't sustainable, but you need ACME automation for both public and internal services without exposing private networks to the internet.</p>
+                    <h3>Self-Signed Certificates for Internal Services</h3>
+                    <p>Your internal APIs, admin panels, and microservices run with self-signed certificates because "it's just internal". But this creates security warnings, trust issues, and complexity.</p>
                     <div class="why-details">
-                        <p><strong>The Challenge:</strong> The CA/Browser Forum has mandated progressive reduction of certificate lifetimes. What used to be manageable with annual renewals becomes impossible with weekly renewals.</p>
-                        <p><strong>The Complexity:</strong> Public services can use HTTP-01 challenges, but internal services like <code>api.company.com</code> and <code>admin.company.com</code> can't be exposed to the internet for ACME validation.</p>
-                        <p><strong>AcmeGuard Solution:</strong> Central ACME gateway handles DNS-01 challenges for all services, internal and external, without internet exposure.</p>
-                    </div>
-                </div>
-                
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="map"></i>
-                    </div>
-                    <h3>Domain Exposure Blind Spots</h3>
-                    <p>You need complete visibility of what domains your organization is exposing to the internet. Certificate Transparency logs reveal the full picture, but who's monitoring them systematically?</p>
-                    <div class="why-details">
-                        <p><strong>The Reality:</strong> Every SSL certificate issued for your domains is logged in Certificate Transparency. This creates a public record of your entire internet-facing infrastructure.</p>
-                        <p><strong>The Risk:</strong> Attackers use CT logs to discover your subdomains and services. If you're not monitoring them, you're missing both opportunities and threats.</p>
-                        <p><strong>AcmeGuard Solution:</strong> Continuous CT log monitoring with intelligent alerting for new certificates across all CAs.</p>
+                        <p><strong>The Problem:</strong> Self-signed certificates cause browser warnings, break automation tools, and create security blind spots in your internal infrastructure.</p>
+                        <p><strong>The Reality:</strong> Internal doesn't mean less important. Your admin.company.com and api.company.com deserve proper certificates too.</p>
+                        <p><strong>AcmeGuard Solution:</strong> Get real, trusted certificates for internal services without exposing them to the internet through DNS-01 challenges.</p>
                     </div>
                 </div>
                 
@@ -94,12 +81,25 @@
                     <div class="why-icon">
                         <i data-lucide="key"></i>
                     </div>
-                    <h3>Private CA Distribution Headaches</h3>
-                    <p>Still distributing private root certificates across your infrastructure? Managing trust stores, handling revocation, and ensuring all clients accept your internal CA is complex and error-prone.</p>
+                    <h3>Private CA Root Certificate Distribution Pain</h3>
+                    <p>You have a private CA but getting all your devices, containers, and services to trust your CA is hard work. Trust stores, revocation, compatibility issues - it never ends.</p>
                     <div class="why-details">
-                        <p><strong>The Maintenance Burden:</strong> Every device, container, and service needs your root CA. Updates require touching every system. Revocation is a nightmare.</p>
-                        <p><strong>The Compatibility Issues:</strong> Mobile devices, third-party tools, and cloud services don't trust your private CA. You end up with mixed environments and security exceptions.</p>
-                        <p><strong>AcmeGuard Solution:</strong> Use trusted public CAs for internal services through secure ACME proxying. No trust store management required.</p>
+                        <p><strong>The Work Never Stops:</strong> Every device, container, and service needs your root CA. Updates mean touching every system. Revocation is a nightmare.</p>
+                        <p><strong>Compatibility Problems:</strong> Mobile devices, third-party tools, and cloud services don't trust your private CA. You end up with mixed environments and security exceptions.</p>
+                        <p><strong>AcmeGuard Solution:</strong> Use trusted public CAs for internal services through secure ACME proxy. No trust store management needed.</p>
+                    </div>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <h3>You Want Real Certificates for Internal Services</h3>
+                    <p>What if api.company.com and admin.company.com had proper certificates without all the work? No more browser warnings, no more trust issues, just clean HTTPS everywhere.</p>
+                    <div class="why-details">
+                        <p><strong>The Dream:</strong> Proper certificates for all your internal services without the complexity of private CAs or the risk of internet exposure.</p>
+                        <p><strong>The Benefits:</strong> No browser warnings, better automation, cleaner monitoring, and proper security for internal traffic.</p>
+                        <p><strong>AcmeGuard Solution:</strong> Real certificates for internal services using DNS-01 validation - no internet exposure required.</p>
                     </div>
                 </div>
                 
@@ -108,63 +108,80 @@
                         <i data-lucide="zap-off"></i>
                     </div>
                     <h3>Certificate Expiration Downtime</h3>
-                    <p>That 3 AM wake-up call because someone forgot to renew a certificate and your API is down. Or worse - customers discovering your expired certificates before you do.</p>
+                    <p>That 3 AM wake-up call because someone forgot to renew a certificate and your API is down. Or worse - customers finding your expired certificates before you do.</p>
                     <div class="why-details">
-                        <p><strong>The Human Factor:</strong> Manual certificate management doesn't scale. People forget, processes break, and critical services go down at the worst possible times.</p>
-                        <p><strong>The Business Impact:</strong> Certificate outages affect customer trust, revenue, and team morale. They're often discovered by customers, not monitoring systems.</p>
-                        <p><strong>AcmeGuard Solution:</strong> Automated renewal with intelligent alerting, approval workflows, and comprehensive expiration tracking across all certificates.</p>
+                        <p><strong>The Human Problem:</strong> Manual certificate management doesn't work at scale. People forget, processes break, and important services go down at the worst times.</p>
+                        <p><strong>The Business Impact:</strong> Certificate outages hurt customer trust, cost money, and damage team morale. Often customers discover them before you do.</p>
+                        <p><strong>AcmeGuard Solution:</strong> Automated renewal with smart alerts, approval workflows, and complete expiration tracking across all certificates.</p>
                     </div>
                 </div>
+                
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <h3>CA/Browser Forum is Making Certificate Lifetimes Much Shorter</h3>
+                    <p>New industry rules: 200 days (March 2026), 100 days (March 2027), 47 days (2029). Manual renewal won't work - you need automation now.</p>
+                    <div class="why-details">
+                        <p><strong>The Timeline:</strong> The CA/Browser Forum has set firm dates for shorter certificate lifetimes. What used to work with yearly renewals won't work with weekly renewals.</p>
+                        <p><strong>The Impact:</strong> Manual processes will break completely. You need automated systems in place before these deadlines hit.</p>
+                        <p><strong>AcmeGuard Solution:</strong> Full automation ready for any certificate lifetime. Built to handle 47-day certificates from day one.</p>
+                    </div>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i data-lucide="map"></i>
+                    </div>
+                    <h3>You Don't Know All the Domains Your Organization Exposes</h3>
+                    <p>Teams are creating services and you find them during security audits or when they break. You need complete visibility of what domains your organization puts on the internet.</p>
+                    <div class="why-details">
+                        <p><strong>The Reality:</strong> Every SSL certificate for your domains gets logged in Certificate Transparency. This creates a public record of your entire internet-facing infrastructure.</p>
+                        <p><strong>The Risk:</strong> Attackers use CT logs to find your subdomains and services. If you're not watching them, you're missing both opportunities and threats.</p>
+                        <p><strong>AcmeGuard Solution:</strong> Continuous CT log monitoring with smart alerts for new certificates across all CAs.</p>
+                    </div>
+                </div>
+                
+                
                 
                 <div class="why-card">
                     <div class="why-icon">
                         <i data-lucide="ghost"></i>
                     </div>
-                    <h3>Shadow IT Certificate Sprawl</h3>
-                    <p>Teams spinning up services with their own certificates, using different CAs, different renewal processes. You discover them during security audits or when they break.</p>
+                    <h3>Shadow IT Uses Different CAs and Processes</h3>
+                    <p>Teams create services with their own certificates, using different CAs and different renewal processes. You find them during security audits or when they break.</p>
                     <div class="why-details">
-                        <p><strong>The Discovery Problem:</strong> Development teams use whatever works fastest. Let's Encrypt, ZeroSSL, cloud provider CAs - each with different lifecycles and management approaches.</p>
-                        <p><strong>The Audit Nightmare:</strong> Security auditors want certificate inventories. You're building spreadsheets from multiple sources, hoping you haven't missed anything critical.</p>
-                        <p><strong>AcmeGuard Solution:</strong> Centralized ACME gateway ensures all certificates flow through controlled workflows while maintaining team autonomy.</p>
+                        <p><strong>The Problem:</strong> Development teams use whatever works fastest. Let's Encrypt, ZeroSSL, cloud provider CAs - each with different lifecycles and management approaches.</p>
+                        <p><strong>The Audit Problem:</strong> Security auditors want certificate inventories. You're building spreadsheets from multiple sources, hoping you haven't missed anything important.</p>
+                        <p><strong>AcmeGuard Solution:</strong> Central ACME gateway makes sure all certificates go through controlled workflows while teams keep their independence.</p>
                     </div>
                 </div>
                 
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i data-lucide="bot"></i>
-                    </div>
-                    <h3>GenAI Amplifies Exposure Risk</h3>
-                    <p>AI-powered development tools make it easier than ever for anyone in your organization to spin up services and expose them with proper SSL. The barrier to creating internet-facing services has never been lower.</p>
-                    <div class="why-details">
-                        <p><strong>The Acceleration Effect:</strong> GitHub Copilot, ChatGPT, and other AI tools help developers create and deploy services faster than ever. Including SSL certificate setup.</p>
-                        <p><strong>The Governance Gap:</strong> Traditional approval processes can't keep up with AI-accelerated development. Services appear online before security teams know they exist.</p>
-                        <p><strong>AcmeGuard Solution:</strong> ACME protocol governance ensures all certificates require approval workflows, regardless of how quickly services are created.</p>
-                    </div>
-                </div>
                 
                 <div class="why-card">
                     <div class="why-icon">
                         <i data-lucide="shield-alert"></i>
                     </div>
-                    <h3>Compliance and Audit Gaps</h3>
-                    <p>Security auditors asking for certificate inventories, compliance frameworks requiring certificate lifecycle management, and you're manually tracking spreadsheets across multiple teams and CAs.</p>
+                    <h3>Auditors Want Certificate Inventories You Don't Have</h3>
+                    <p>Security auditors ask for certificate inventories, compliance frameworks need certificate lifecycle management, and you're manually tracking spreadsheets across multiple teams and CAs.</p>
                     <div class="why-details">
-                        <p><strong>The Regulatory Reality:</strong> SOC 2, ISO 27001, PCI DSS - all require certificate lifecycle management. Manual tracking doesn't meet audit standards.</p>
-                        <p><strong>The Reporting Challenge:</strong> Auditors want comprehensive reports: what certificates exist, when they expire, who requested them, what approval process was followed.</p>
+                        <p><strong>The Compliance Reality:</strong> SOC 2, ISO 27001, PCI DSS - all need certificate lifecycle management. Manual tracking doesn't meet audit standards.</p>
+                        <p><strong>The Reporting Problem:</strong> Auditors want complete reports: what certificates exist, when they expire, who requested them, what approval process was used.</p>
                         <p><strong>AcmeGuard Solution:</strong> Built-in compliance reporting with detailed audit trails for all certificate lifecycle events.</p>
                     </div>
                 </div>
+                
                 
                 <div class="why-card">
                     <div class="why-icon">
                         <i data-lucide="dollar-sign"></i>
                     </div>
-                    <h3>Per-Certificate Pricing Pain</h3>
-                    <p>Enterprise CA solutions charging per certificate discourage security best practices. You want to use certificates everywhere they make sense, not ration them based on budget constraints.</p>
+                    <h3>You Use an Enterprise CA, Paying Per Certificate with No Real Added Value</h3>
+                    <p>Why pay $50-200 per certificate when Let's Encrypt is free and just as trusted? Enterprise CAs often provide no additional value for basic SSL certificates.</p>
                     <div class="why-details">
-                        <p><strong>The Perverse Incentive:</strong> When certificates cost $50-200 each, teams avoid using them for internal services, development environments, and microservices.</p>
-                        <p><strong>The Security Trade-off:</strong> Budget constraints force security compromises. Services run without SSL, use self-signed certificates, or share certificates inappropriately.</p>
-                        <p><strong>AcmeGuard Solution:</strong> Flat-rate pricing encourages certificate best practices. Use certificates everywhere they improve security.</p>
+                        <p><strong>The Money Problem:</strong> When certificates cost $50-200 each, teams avoid using them for internal services, development environments, and microservices.</p>
+                        <p><strong>The Security Trade-off:</strong> Budget limits force security compromises. Services run without SSL, use self-signed certificates, or share certificates badly.</p>
+                        <p><strong>AcmeGuard Solution:</strong> Use free Let's Encrypt certificates with enterprise governance. Get the best of both worlds - free certificates with professional management.</p>
                     </div>
                 </div>
                 
@@ -172,12 +189,12 @@
                     <div class="why-icon">
                         <i data-lucide="users-x"></i>
                     </div>
-                    <h3>Team Coordination Chaos</h3>
-                    <p>DevOps, Security, and Platform teams all managing certificates differently. No central authority, no consistent policies, no shared visibility into what's happening across your certificate landscape.</p>
+                    <h3>Teams Manage Certificates in Different Ways with No Coordination</h3>
+                    <p>DevOps, Security, and Platform teams all manage certificates differently. No central authority, no consistent policies, no shared visibility into what's happening across your certificate landscape.</p>
                     <div class="why-details">
                         <p><strong>The Silos Problem:</strong> Each team has their own tools, processes, and certificate sources. What works for one team creates problems for others.</p>
-                        <p><strong>The Communication Gap:</strong> Security teams don't know what DevOps is deploying. Platform teams can't enforce policies they can't see.</p>
-                        <p><strong>AcmeGuard Solution:</strong> Unified platform with role-based access controls, team delegation, and centralized policy enforcement.</p>
+                        <p><strong>The Communication Problem:</strong> Security teams don't know what DevOps is deploying. Platform teams can't enforce policies they can't see.</p>
+                        <p><strong>AcmeGuard Solution:</strong> Single platform with role-based access controls, team delegation, and central policy enforcement.</p>
                     </div>
                 </div>
             </div>
