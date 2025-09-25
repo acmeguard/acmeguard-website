@@ -287,8 +287,9 @@ h4 { font-size: 1.25rem; }
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--space-xl);
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    justify-content: center;
 }
 
 .stat {
