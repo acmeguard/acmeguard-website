@@ -62,17 +62,28 @@
     <section class="quiz-section">
         <div class="container">
             <div class="quiz-container">
-                <div class="quiz-items">
-                    <div class="quiz-item">
-                        <label class="quiz-checkbox">
-                            <input type="checkbox" data-point="self-signed-certs">
-                            <span class="checkmark"></span>
-                            <div class="quiz-content">
-                                <h4>You still use self-signed certificates for internal services</h4>
-                                <p>Your internal APIs, admin panels, and microservices run with self-signed certs because "it's just internal"</p>
-                            </div>
-                        </label>
-                    </div>
+            <div class="quiz-items">
+                <div class="quiz-item">
+                    <label class="quiz-checkbox">
+                        <input type="checkbox" data-point="plain-http">
+                        <span class="checkmark"></span>
+                        <div class="quiz-content">
+                            <h4>You are still running a lot of internal stuff in plain unencrypted HTTP</h4>
+                            <p>No SSL at all - just plain HTTP for internal tools, dashboards, and APIs. Everything travels in clear text but "it is fine because it is internal"</p>
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="quiz-item">
+                    <label class="quiz-checkbox">
+                        <input type="checkbox" data-point="self-signed-certs">
+                        <span class="checkmark"></span>
+                        <div class="quiz-content">
+                            <h4>You use self-signed certificates that nobody trusts</h4>
+                            <p>Browser warnings, certificate errors, and "click through this security warning" has become normal for your team</p>
+                        </div>
+                    </label>
+                </div>
                     
                     <div class="quiz-item">
                         <label class="quiz-checkbox">
@@ -195,9 +206,9 @@
         <div class="container">
             <div class="sticky-footer-content">
                 <div class="sticky-score">
-                        <div class="sticky-score-number">
-                            <span id="sticky-score">0</span><span>/11</span>
-                        </div>
+                            <div class="sticky-score-number">
+                                <span id="sticky-score">0</span><span>/12</span>
+                            </div>
                     <div class="sticky-score-text" id="sticky-score-text">
                         Certificate Chaos Score
                     </div>
@@ -205,16 +216,20 @@
                 <div class="sticky-message" id="sticky-message">
                     Keep checking items to see your results!
                 </div>
-                <div class="sticky-actions">
-                    <a href="why.html" class="btn btn-secondary" style="text-decoration: none; margin-right: 1rem;">
-                        <i data-lucide="info"></i>
-                        Learn More
-                    </a>
-                    <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" class="btn btn-primary" style="text-decoration: none;">
-                        <i data-lucide="calendar"></i>
-                        Book Demo
-                    </a>
-                </div>
+                    <div class="sticky-actions">
+                        <a href="pitch.html" class="btn btn-secondary" style="text-decoration: none; margin-right: 0.5rem;">
+                            <i data-lucide="users"></i>
+                            Pitch Materials
+                        </a>
+                        <a href="why.html" class="btn btn-secondary" style="text-decoration: none; margin-right: 0.5rem;">
+                            <i data-lucide="info"></i>
+                            Learn More
+                        </a>
+                        <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" class="btn btn-primary" style="text-decoration: none;">
+                            <i data-lucide="calendar"></i>
+                            Book Demo
+                        </a>
+                    </div>
             </div>
         </div>
     </div>
@@ -305,20 +320,21 @@
             const stickyScore = document.getElementById('sticky-score');
             const stickyMessage = document.getElementById('sticky-message');
             
-            const scoreMessages = {
-                0: "Keep checking items to see your results!",
-                1: "One governance gap - manageable for now 👍",
-                2: "Certificate chaos is starting 🤔",
-                3: "You need centralized ACME governance 🚨", 
-                4: "Serious certificate management gaps 😬",
-                5: "Major governance breakdown - time to act! 😱",
-                6: "You're our perfect customer - let's talk! 🎯",
-                7: "Certificate chaos expert - we should hire you! 🏆",
-                8: "You've survived certificate hell 💪",
-                9: "Almost full chaos - you need help NOW! 🔥",
-                10: "Certificate management clusterf*ck! 💥",
-                11: "FULL BINGO! You NEED AcmeGuard immediately! 🎰"
-            };
+              const scoreMessages = {
+                  0: "Keep checking items to see your results!",
+                  1: "One governance gap - manageable for now 👍",
+                  2: "Certificate chaos is starting 🤔",
+                  3: "You need centralized ACME governance 🚨",
+                  4: "Serious certificate management gaps 😬",
+                  5: "Major governance breakdown - time to act! 😱",
+                  6: "You're our perfect customer - let's talk! 🎯",
+                  7: "Certificate chaos expert - we should hire you! 🏆",
+                  8: "You've survived certificate hell 💪",
+                  9: "Almost full chaos - you need help NOW! 🔥",
+                  10: "Certificate management clusterf*ck! 💥",
+                  11: "Nearly FULL BINGO! You NEED AcmeGuard! 🎰",
+                  12: "FULL BINGO! You NEED AcmeGuard immediately! 🎰"
+              };
             
             function updateQuiz() {
                 const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;

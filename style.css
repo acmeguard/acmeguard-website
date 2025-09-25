@@ -1254,6 +1254,239 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Pitch Page Styles */
+.pitch-section {
+    padding: var(--space-3xl) 0;
+    background: var(--surface);
+}
+
+.pitch-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.pitch-header h2 {
+    font-family: 'Avant Garde', var(--font-sans);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.pitch-header p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.role-selector {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.role-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    background: var(--background);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.role-btn:hover {
+    border-color: var(--primary-light);
+    background: var(--surface-light);
+    transform: translateY(-2px);
+}
+
+.role-btn.active {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: white;
+}
+
+.role-btn i {
+    width: 32px;
+    height: 32px;
+}
+
+.argument-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.argument-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-xl);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    border-radius: var(--radius-lg);
+}
+
+.argument-header h3 {
+    font-family: 'Avant Garde', var(--font-sans);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+.argument-header h3 i {
+    width: 32px;
+    height: 32px;
+}
+
+.role-description {
+    font-size: 1.125rem;
+    opacity: 0.9;
+}
+
+.argument-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+}
+
+.argument-card {
+    background: var(--background);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.argument-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.argument-card h4 {
+    font-family: 'Avant Garde', var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.argument-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+}
+
+.argument-card p:last-child {
+    margin-bottom: 0;
+}
+
+.argument-card strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.argument-summary {
+    background: var(--surface-light);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--primary);
+}
+
+.argument-summary h4 {
+    font-family: 'Avant Garde', var(--font-sans);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.argument-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.argument-summary li {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+    position: relative;
+}
+
+.argument-summary li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.developer-cta {
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    background: var(--primary-light);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.developer-cta p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+@media (max-width: 768px) {
+    .role-selector {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
+    }
+    
+    .role-btn {
+        padding: var(--space-md);
+        font-size: 0.9rem;
+    }
+    
+    .role-btn span {
+        font-size: 0.8rem;
+    }
+    
+    .argument-header h3 {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .argument-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .argument-card {
+        padding: var(--space-lg);
+    }
+}
+
 /* Pricing Page Styles */
 .pricing-hero {
     padding: 8rem 0 4rem;
