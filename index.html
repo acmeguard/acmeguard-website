@@ -265,24 +265,48 @@
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Certificate Discovery</h3>
-                        <p>AcmeGuard continuously monitors Certificate Transparency logs to discover all certificates issued for your domains across any CA.</p>
+                        <p>AcmeGuard monitors Certificate Transparency logs to discover all certificates issued for your domains across any CA. Get complete visibility into your certificate landscape.</p>
+                        <div class="step-details">
+                            <ul>
+                                <li>Monitor Let's Encrypt, DigiCert, Sectigo, ZeroSSL, and 100+ other CAs</li>
+                                <li>Detect unknown certificate requests within minutes</li>
+                                <li>Track certificate lifecycle and expiration dates</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>ACME Protocol Gateway</h3>
-                        <p>Configure your ACME clients to route through AcmeGuard's protocol gateway. All DNS-01 challenges are handled centrally while your tools work unchanged.</p>
+                        <p>Central gateway that manages all ACME challenge traffic. Use your existing tools unchanged - certbot, acme.sh, cert-manager - while getting enterprise control.</p>
+                        <div class="step-details">
+                            <ul>
+                                <li>Works with unmodified ACME clients and existing DNS plugins</li>
+                                <li>Supports DNS-01 challenges for internal networks (not exposed to the internet)</li>
+                                <li>Integrates with Cloudflare, Route53, Google Cloud DNS, PowerDNS, and more</li>
+                                <li>Enforces strict isolation with dedicated credentials per certificate</li>
+                                <li>Trace any ACME request flow to the requestor and the resulting certificate</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Unified Management</h3>
-                        <p>Manage all certificates through the AcmeGuard portal. Set approval workflows, assign responsibilities, and track compliance.</p>
+                        <p>Single portal for all your certificates with approval workflows, RBAC, and compliance reporting. Turn certificate chaos into controlled, auditable processes.</p>
+                        <div class="step-details">
+                            <ul>
+                                <li>Granular RBAC and customizable approval workflows</li>
+                                <li>Complete audit trails for compliance</li>
+                                <li>Automated renewal and expiration alerts</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </section>
 
@@ -291,7 +315,7 @@
         <div class="container">
             <div class="cta-content">
                 <h2>Ready to Stop Certificate Chaos?</h2>
-                <p>Join enterprise teams who use AcmeGuard to control ACME protocol usage, secure internal services, and discover Shadow IT certificates.</p>
+                <p>Join enterprise teams who use AcmeGuard to control ACME protocol usage, secure internal services, and discover unknown certificates.</p>
                 <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" class="btn btn-primary btn-large" style="text-decoration: none;">
                     <i data-lucide="calendar"></i>
                     Schedule Your Demo
