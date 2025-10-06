@@ -125,6 +125,19 @@ h4 { font-size: 1.25rem; }
     transform: translateY(-1px);
 }
 
+.btn-quiz {
+    background: white;
+    color: var(--primary);
+    border: 3px solid var(--primary);
+    font-weight: 600;
+}
+
+.btn-quiz:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
 .btn-large {
     padding: var(--space-md) var(--space-xl);
     font-size: 1.1rem;
