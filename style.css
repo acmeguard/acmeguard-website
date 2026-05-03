@@ -411,6 +411,9 @@ h4 { font-size: 1.25rem; }
     margin-bottom: var(--space-xs);
     letter-spacing: -0.02em;
     font-variant-numeric: tabular-nums;
+    /* Mono fonts ship a 1ch space which looks like a void next to numerals.
+     * Pull words back so "47 days" reads as a unit. */
+    word-spacing: -0.25em;
 }
 
 .stat-label {
