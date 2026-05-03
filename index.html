@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcmeGuard - The unified certificate management platform</title>
-    <meta name="description" content="Complete certificate visibility across all CAs. Eliminate blind spots and gain control over your enterprise certificate landscape.">
+    <title>AcmeGuard, certificate governance that actually works</title>
+    <meta name="description" content="One ACME gateway, one CT watcher. Issue certificates for internal services without exposing them, govern every request, find the ones you didn't know about.">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
@@ -29,13 +29,13 @@
                 </button>
                 <div class="nav-links">
                     <a href="#features" class="nav-link">Features</a>
-                    <a href="#how-it-works" class="nav-link">How It Works</a>
+                    <a href="#how-it-works" class="nav-link">How it works</a>
                     <a href="quiz.html" class="nav-link">Quiz</a>
                     <a href="why.html" class="nav-link">Why</a>
                     <a href="pitch.html" class="nav-link">Pitch</a>
                     <a href="pricing.html" class="nav-link">Pricing</a>
                     <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" class="btn btn-primary" style="text-decoration: none;">
-                        Book Demo
+                        Book a demo
                     </a>
                 </div>
             </div>
@@ -46,27 +46,29 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                <p class="eyebrow">Certificate governance, end to end</p>
                 <h1 class="hero-title">
-                    The unified certificate management platform
+                    Watch every certificate. <span class="hero-title-accent">Govern every request.</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Stop certificate chaos. Get proper SSL for internal services, 
-                    control ACME protocol usage, find unknown certificates, and avoid downtimes.
+                    One ACME gateway, one CT watcher. Issue certificates for internal services
+                    without exposing them. Find the ones you didn't know about. Skip the next
+                    renewal-day outage.
                 </p>
                 <div class="hero-cta">
                     <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" class="btn btn-primary btn-large" style="text-decoration: none;">
                         <i data-lucide="calendar"></i>
-                        Schedule Demo
+                        Book a demo
                     </a>
                     <a href="quiz.html" class="btn btn-quiz btn-large" style="text-decoration: none;">
                         <i data-lucide="clipboard-check"></i>
-                        Take the Quiz
+                        Take the readiness quiz
                     </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-number">79%<sup><a href="#footnote-1">1</a></sup></div>
-                        <div class="stat-label">of top 1000 companies can't control who issues certificates for their domains</div>
+                        <div class="stat-label">of the top 1,000 companies can't control who issues certificates for their domains</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">40%<sup><a href="#footnote-2">2</a></sup></div>
@@ -74,11 +76,11 @@
                     </div>
                     <div class="stat">
                         <div class="stat-number">81%<sup><a href="#footnote-3">3</a></sup></div>
-                        <div class="stat-label">of companies experienced certificate-related outages in the past two years</div>
+                        <div class="stat-label">of companies had a certificate outage in the last two years</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">47 days<sup><a href="#footnote-4">4</a></sup></div>
-                        <div class="stat-label">maximum certificate lifetime by 2029. Shrinking from 200 days (2026), 100 days (2027), to 47 days (2029)</div>
+                        <div class="stat-label">maximum certificate lifetime by 2029, down from 200 days in 2026, 100 in 2027</div>
                     </div>
                 </div>
             </div>
@@ -89,30 +91,31 @@
     <section class="problem">
         <div class="container">
             <div class="section-header">
-                <h2>The Certificate Chaos Challenge</h2>
-                <p>Self-signed certificates, expired certificate downtime, and teams requesting certificates you don't know about</p>
+                <p class="eyebrow">The problem</p>
+                <h2>Three ways certificates get out of hand</h2>
+                <p>Self-signed internals, surprise certificates from teams you've never met, and a renewal cadence about to be measured in weeks.</p>
             </div>
             <div class="problem-grid">
                 <div class="problem-card">
                     <div class="problem-icon">
                         <i data-lucide="eye-off"></i>
                     </div>
-                    <h3>Ungoverned ACME Protocol</h3>
-                    <p>Anyone with domain access can request SSL certificates through ACME challenges. No visibility into who's requesting what certificates when.</p>
+                    <h3>Ungoverned ACME requests</h3>
+                    <p>Anyone with domain access can pull a certificate. You have no idea who, when, or why.</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">
                         <i data-lucide="shield-x"></i>
                     </div>
-                    <h3>Self-Signed Certificates for Internal Services</h3>
-                    <p>Your internal APIs, admin panels, and microservices run with self-signed certificates because "it's just internal" - creating security warnings and trust issues.</p>
+                    <h3>Self-signed internals</h3>
+                    <p>Internal APIs, admin panels, and microservices run with self-signed certs because "it's just internal." Your engineers learn to click through warnings.</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">
                         <i data-lucide="alert-triangle"></i>
                     </div>
-                    <h3>Expired Certificate Downtime</h3>
-                    <p>Services go down because someone forgot to renew a certificate. With lifetimes shrinking to 47 days by 2029, manual tracking becomes impossible.</p>
+                    <h3>Renewal-day outages</h3>
+                    <p>Services go down because someone forgot to renew. At 47-day lifetimes, manual tracking is over.</p>
                 </div>
             </div>
         </div>
@@ -122,8 +125,9 @@
     <section class="solution">
         <div class="container">
             <div class="section-header">
-                <h2>Two-Fold Solution: Watch + Enforce</h2>
-                <p>Central ACME protocol control with complete certificate visibility across all infrastructures</p>
+                <p class="eyebrow">The approach</p>
+                <h2>Watch + enforce</h2>
+                <p>One control point for every ACME request. Visibility across every CA, every team.</p>
             </div>
             <div class="solution-grid">
                 <div class="solution-card">
@@ -131,12 +135,12 @@
                         <i data-lucide="search"></i>
                     </div>
                     <h3>Watch</h3>
-                    <p><strong>Certificate Discovery Engine</strong></p>
+                    <p><strong>Certificate discovery engine</strong></p>
                     <ul>
-                        <li>Monitor Certificate Transparency logs</li>
-                        <li>Detect certificates across all CAs</li>
-                        <li>Identify unauthorized and unknown certificates</li>
-                        <li>Track certificate lifecycle and expiration</li>
+                        <li>Stream every certificate from CT logs</li>
+                        <li>Cover Let's Encrypt, DigiCert, Sectigo, ZeroSSL, every public CA</li>
+                        <li>Surface unauthorised certificates the moment they're issued</li>
+                        <li>Track lifecycle and expiry across the whole estate</li>
                     </ul>
                 </div>
                 <div class="solution-card">
@@ -144,12 +148,12 @@
                         <i data-lucide="shield-check"></i>
                     </div>
                     <h3>Enforce</h3>
-                    <p><strong>Central ACME Protocol Gate</strong></p>
+                    <p><strong>Central ACME gateway</strong></p>
                     <ul>
-                        <li>All ACME requests flow through controlled workflows</li>
-                        <li>Secure private networks without internet exposure</li>
-                        <li>Works with unmodified ACME clients</li>
-                        <li>Granular RBAC and approval workflows</li>
+                        <li>Every request flows through one approval-aware control point</li>
+                        <li>Certificates for private networks without internet exposure</li>
+                        <li>Unmodified ACME clients (certbot, acme.sh, cert-manager) keep working</li>
+                        <li>RBAC, dedicated credentials per certificate, full audit trail</li>
                     </ul>
                 </div>
             </div>
@@ -160,65 +164,73 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2>Enterprise-Grade Features</h2>
-                <p>Everything you need for complete certificate governance</p>
+                <p class="eyebrow">Capabilities</p>
+                <h2>What you get</h2>
+                <p>Everything end-to-end certificate governance needs.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i data-lucide="eye"></i>
                     </div>
-                    <h3>Cross-CA Visibility</h3>
-                    <p>Monitor certificates from Let's Encrypt, DigiCert, Sectigo, ZeroSSL and more in a single dashboard.</p>
+                    <h3>Cross-CA visibility</h3>
+                    <p>One pane for certificates from Let's Encrypt, DigiCert, Sectigo, ZeroSSL, and anything else that publishes to CT.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i data-lucide="users"></i>
                     </div>
-                    <h3>SSO & Teams</h3>
-                    <p>Full OIDC support with team-based access controls and delegated domain management.</p>
+                    <h3>SSO &amp; teams</h3>
+                    <p>OIDC sign-in, team-scoped permissions, delegated domain ownership. Out of the box.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i data-lucide="git-branch"></i>
                     </div>
-                    <h3>Approval Workflows</h3>
-                    <p>Customizable approval processes for certificate requests with granular RBAC policies.</p>
+                    <h3>Approval workflows</h3>
+                    <p>Configurable approvals for certificate requests. RBAC where you need it, none where you don't.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i data-lucide="terminal"></i>
                     </div>
-                    <h3>ACME Protocol Gateway</h3>
-                    <p>Central control point for all ACME certificate requests. Works with certbot, acme.sh, cert-manager and other unmodified clients.</p>
+                    <h3>ACME gateway</h3>
+                    <p>One control point for every ACME request. certbot, acme.sh, cert-manager. Unchanged.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i data-lucide="bell"></i>
                     </div>
-                    <h3>Smart Alerts</h3>
-                    <p>Proactive notifications for certificate expiration, rogue certificates, and compliance issues.</p>
+                    <h3>Proactive alerts</h3>
+                    <p>Upcoming expiry, unauthorised issuances, policy drift. You hear about it before someone else does.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i data-lucide="database"></i>
                     </div>
-                    <h3>Private Network Security</h3>
-                    <p>Issue SSL certificates for internal services without exposing them to the internet. Secure api.company.com, admin.company.com and more.</p>
+                    <h3>Private-network SSL</h3>
+                    <p>Real certificates for internal services without exposing them. <code>api.company.com</code>, <code>admin.company.com</code>, anything else behind your perimeter.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i data-lucide="file-text"></i>
                     </div>
-                    <h3>Compliance Reports</h3>
-                    <p>Detailed audit trails and compliance reporting for security and regulatory requirements.</p>
+                    <h3>Audit trails</h3>
+                    <p>Trace any certificate to the request, the requester, and the policy that signed it off.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i data-lucide="globe"></i>
                     </div>
-                    <h3>Wildcard Support</h3>
-                    <p>Single, multi-domain, and wildcard certificate support with intelligent subdomain management.</p>
+                    <h3>Wildcard support</h3>
+                    <p>Single-domain, multi-domain, and wildcard certificates. Subdomain-aware policy throughout.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="network"></i>
+                    </div>
+                    <h3>DNS provider plug-ins</h3>
+                    <p>Cloudflare, Route 53, Google Cloud DNS, PowerDNS, RFC 2136. Bring your DNS, keep your provider.</p>
                 </div>
             </div>
         </div>
@@ -228,30 +240,31 @@
     <section id="use-cases" class="use-cases">
         <div class="container">
             <div class="section-header">
-                <h2>Use Cases</h2>
-                <p>How AcmeGuard solves real enterprise challenges</p>
+                <p class="eyebrow">Use cases</p>
+                <h2>Where teams adopt it first</h2>
+                <p>The three problems that get AcmeGuard purchased.</p>
             </div>
             <div class="use-cases-grid">
                 <div class="use-case-card">
                     <div class="use-case-icon">
                         <i data-lucide="dollar-sign"></i>
                     </div>
-                    <h3>Stop Paying Per Certificate</h3>
-                    <p>Why pay $50-200 per certificate when free ACME services work just as well? Keep free certificates while getting enterprise governance and control.</p>
+                    <h3>Stop paying per certificate</h3>
+                    <p>Free ACME services do the job. AcmeGuard adds the governance you'd otherwise buy from a CA, without the invoice.</p>
                 </div>
                 <div class="use-case-card">
                     <div class="use-case-icon">
                         <i data-lucide="network"></i>
                     </div>
-                    <h3>Fix Your Self-Signed Certificate Problem</h3>
-                    <p>Get proper SSL certificates for internal services like api.company.com and admin.company.com without exposing them to the internet. No more browser warnings or trust issues.</p>
+                    <h3>Fix the self-signed problem</h3>
+                    <p>Real SSL for <code>api.company.com</code> and <code>admin.company.com</code> without exposing them. No browser warnings. No more "trust me" prompts.</p>
                 </div>
                 <div class="use-case-card">
                     <div class="use-case-icon">
                         <i data-lucide="shield"></i>
                     </div>
-                    <h3>Stop Unauthorized Certificate Requests</h3>
-                    <p>Discover certificates you didn't know existed and prevent unauthorized ACME requests. Complete visibility and control over who can request certificates and when.</p>
+                    <h3>Shut down unauthorised requests</h3>
+                    <p>Discover the certificates you didn't know existed. Gate every new one through the same approval flow.</p>
                 </div>
             </div>
         </div>
@@ -261,56 +274,223 @@
     <section id="how-it-works" class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2>How It Works</h2>
-                <p>Simple integration with your existing infrastructure</p>
+                <p class="eyebrow">How it works</p>
+                <h2>Three components, one control point</h2>
+                <p>Drops into your existing infrastructure. No client migration.</p>
             </div>
             <div class="workflow-steps">
                 <div class="step">
-                    <div class="step-number">1</div>
+                    <div class="step-number">01</div>
                     <div class="step-content">
-                        <h3>Certificate Discovery</h3>
-                        <p>AcmeGuard monitors Certificate Transparency logs to discover all certificates issued for your domains across any CA. Get complete visibility into your certificate landscape.</p>
+                        <h3>Certificate discovery</h3>
+                        <p>AcmeGuard streams Certificate Transparency logs and surfaces every certificate issued for your domains, from any CA, within minutes.</p>
                         <div class="step-details">
                             <ul>
-                                <li>Monitor Let's Encrypt, DigiCert, Sectigo, ZeroSSL, and 100+ other CAs</li>
-                                <li>Detect unknown certificate requests within minutes</li>
-                                <li>Track certificate lifecycle and expiration dates</li>
+                                <li>Let's Encrypt, DigiCert, Sectigo, ZeroSSL, and 100+ others</li>
+                                <li>Unknown issuances appear as they happen</li>
+                                <li>Lifecycle and expiry tracked across the whole estate</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="step">
-                    <div class="step-number">2</div>
+                    <div class="step-number">02</div>
                     <div class="step-content">
-                        <h3>ACME Protocol Gateway</h3>
-                        <p>Central gateway that manages all ACME challenge traffic. Use your existing tools unchanged - certbot, acme.sh, cert-manager - while getting enterprise control.</p>
+                        <h3>ACME gateway</h3>
+                        <p>One control point for every ACME request. certbot, acme.sh, cert-manager keep working. You get the governance.</p>
                         <div class="step-details">
                             <ul>
-                                <li>Works with unmodified ACME clients and existing DNS plugins</li>
-                                <li>Supports DNS-01 challenges for internal networks (not exposed to the internet)</li>
-                                <li>Integrates with Cloudflare, Route53, Google Cloud DNS, PowerDNS, and more</li>
-                                <li>Enforces strict isolation with dedicated credentials per certificate</li>
-                                <li>Trace any ACME request flow to the requestor and the resulting certificate</li>
+                                <li>Unmodified ACME clients, existing DNS plug-ins</li>
+                                <li>DNS-01 for private networks, no internet exposure</li>
+                                <li>Cloudflare, Route 53, Google Cloud DNS, PowerDNS, RFC 2136</li>
+                                <li>Per-certificate credential isolation, strict</li>
+                                <li>Every request traces back to a requester and a policy</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="step">
-                    <div class="step-number">3</div>
+                    <div class="step-number">03</div>
                     <div class="step-content">
-                        <h3>Unified Management</h3>
-                        <p>Single portal for all your certificates with approval workflows, RBAC, and compliance reporting. Turn certificate chaos into controlled, auditable processes.</p>
+                        <h3>Unified governance</h3>
+                        <p>One portal, every certificate. Approval workflows, RBAC, audit-ready reports. The chaos becomes a process you can hand to compliance.</p>
                         <div class="step-details">
                             <ul>
-                                <li>Granular RBAC and customizable approval workflows</li>
-                                <li>Complete audit trails for compliance</li>
-                                <li>Automated renewal and expiration alerts</li>
+                                <li>RBAC and approval workflows, configurable</li>
+                                <li>End-to-end audit trails</li>
+                                <li>Automated renewals, automated expiry alerts</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
+        </div>
+    </section>
+
+    <!-- Architecture Diagram -->
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <div class="section-header">
+                <p class="eyebrow">Architecture</p>
+                <h2>Where AcmeGuard sits</h2>
+                <p>One credential-scoped DNS-01 proxy. One CT watcher. Your ACME clients don't notice the difference.</p>
+            </div>
+
+            <figure class="architecture-figure">
+                <svg
+                    class="architecture-diagram"
+                    viewBox="0 0 1040 540"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-labelledby="arch-title arch-desc"
+                >
+                    <title id="arch-title">AcmeGuard architecture</title>
+                    <desc id="arch-desc">
+                        ACME clients on the left talk to AcmeGuard in the middle, which proxies DNS-01
+                        challenges to your real DNS and forwards challenge responses to public CAs.
+                        Independently, AcmeGuard watches Certificate Transparency logs to detect any
+                        certificate issued for your domains that did not flow through the gateway.
+                    </desc>
+
+                    <defs>
+                        <!-- Arrow head, picks up its parent's stroke -->
+                        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+                                markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                            <path d="M 0 1 L 9 5 L 0 9 z" fill="var(--primary)" />
+                        </marker>
+
+                        <!-- Subtle hairline grid for the AcmeGuard group, echoing the canvas -->
+                        <pattern id="arch-grid" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+                            <path d="M 16 0 L 0 0 L 0 16" fill="none"
+                                  stroke="color-mix(in oklch, var(--primary) 18%, transparent)"
+                                  stroke-width="0.5" />
+                        </pattern>
+                    </defs>
+
+                    <!-- Column labels -->
+                    <text x="160" y="38" class="arch-label">Your stack</text>
+                    <text x="520" y="38" class="arch-label">AcmeGuard</text>
+                    <text x="880" y="38" class="arch-label">External</text>
+
+                    <!-- Left column: ACME clients -->
+                    <g class="arch-group">
+                        <rect class="arch-box" x="50" y="80" width="220" height="60" rx="4" />
+                        <text class="arch-box-title" x="160" y="106">cert-manager</text>
+                        <text class="arch-box-sub" x="160" y="125">Kubernetes</text>
+
+                        <rect class="arch-box" x="50" y="170" width="220" height="60" rx="4" />
+                        <text class="arch-box-title" x="160" y="196">certbot</text>
+                        <text class="arch-box-sub" x="160" y="215">Linux hosts</text>
+
+                        <rect class="arch-box" x="50" y="260" width="220" height="60" rx="4" />
+                        <text class="arch-box-title" x="160" y="286">acme.sh</text>
+                        <text class="arch-box-sub" x="160" y="305">Anything else</text>
+                    </g>
+
+                    <!-- Middle column: AcmeGuard ("the box") -->
+                    <g class="arch-acmeguard">
+                        <rect class="arch-acmeguard-bg" x="380" y="60" width="280" height="420" rx="6" />
+                        <rect class="arch-acmeguard-grid" x="380" y="60" width="280" height="420" rx="6"
+                              fill="url(#arch-grid)" />
+
+                        <rect class="arch-box arch-box-primary" x="400" y="100" width="240" height="100" rx="4" />
+                        <text class="arch-box-title" x="520" y="130">ACME gateway</text>
+                        <text class="arch-box-sub" x="520" y="151">Credential-scoped DNS-01 proxy</text>
+                        <text class="arch-box-sub" x="520" y="170">RFC 2136 · PowerDNS · ACME-DNS</text>
+
+                        <rect class="arch-box arch-box-primary" x="400" y="225" width="240" height="80" rx="4" />
+                        <text class="arch-box-title" x="520" y="255">Policy &amp; audit log</text>
+                        <text class="arch-box-sub" x="520" y="276">Per-credential scope, full trail</text>
+
+                        <rect class="arch-box arch-box-primary" x="400" y="335" width="240" height="100" rx="4" />
+                        <text class="arch-box-title" x="520" y="365">Discovery watcher</text>
+                        <text class="arch-box-sub" x="520" y="386">CT-log stream, every public CA</text>
+                        <text class="arch-box-sub" x="520" y="405">Flags certs that bypass the gate</text>
+                    </g>
+
+                    <!-- Right column: External infrastructure -->
+                    <g class="arch-group">
+                        <rect class="arch-box" x="770" y="80" width="220" height="60" rx="4" />
+                        <text class="arch-box-title" x="880" y="106">Real DNS</text>
+                        <text class="arch-box-sub" x="880" y="125">Cloudflare · Route 53 · …</text>
+
+                        <rect class="arch-box" x="770" y="170" width="220" height="60" rx="4" />
+                        <text class="arch-box-title" x="880" y="196">Public CAs</text>
+                        <text class="arch-box-sub" x="880" y="215">Let's Encrypt · ZeroSSL · …</text>
+
+                        <rect class="arch-box" x="770" y="370" width="220" height="60" rx="4" />
+                        <text class="arch-box-title" x="880" y="396">CT logs</text>
+                        <text class="arch-box-sub" x="880" y="415">Public transparency stream</text>
+                    </g>
+
+                    <!--
+                        All arrows use cubic Béziers so they all share one continuous-curve
+                        aesthetic. Left-side arrows fan three clients into the gateway; right-side
+                        arrows sweep out to external systems. The CT-watch arrow flows back into
+                        the discovery watcher.
+                    -->
+
+                    <!-- Clients → gateway: three cubic curves fanning into the gateway's left edge -->
+                    <g class="arch-arrow">
+                        <path d="M 270 110 C 335 110, 335 130, 400 130" fill="none" />
+                        <path d="M 270 200 C 335 200, 335 150, 400 150" fill="none" />
+                        <path d="M 270 290 C 335 290, 335 180, 400 180" fill="none" />
+                    </g>
+                    <text class="arch-step" x="335" y="75">01 · ACME challenge</text>
+
+                    <!-- Gateway → real DNS: long cubic sweep up to the DNS box -->
+                    <g class="arch-arrow">
+                        <path d="M 640 130 C 705 130, 705 110, 770 110" fill="none" />
+                    </g>
+                    <text class="arch-step" x="705" y="75">02 · DNS-01 update</text>
+
+                    <!-- Gateway → Public CA: long cubic sweep down to the CA box -->
+                    <g class="arch-arrow">
+                        <path d="M 640 165 C 705 165, 705 200, 770 200" fill="none" />
+                    </g>
+                    <text class="arch-step" x="705" y="158">03 · Certificate issued</text>
+
+                    <!-- CT logs → discovery: long cubic sweep back leftward -->
+                    <g class="arch-arrow">
+                        <path d="M 770 400 C 705 400, 705 385, 640 385" fill="none" />
+                    </g>
+                    <text class="arch-step" x="705" y="350">04 · CT watch</text>
+                </svg>
+
+                <figcaption class="architecture-caption">
+                    <ol class="architecture-legend">
+                        <li>
+                            <span class="architecture-legend-num">01</span>
+                            <div>
+                                <strong>ACME challenge.</strong>
+                                Your client speaks ACME to AcmeGuard's nameserver instead of your real DNS. That's the only change.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="architecture-legend-num">02</span>
+                            <div>
+                                <strong>DNS-01 update.</strong>
+                                AcmeGuard checks the credential against the requested name, then updates your real DNS provider. Cloudflare, Route 53, Google Cloud DNS, PowerDNS, RFC 2136. One credential per delegated domain.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="architecture-legend-num">03</span>
+                            <div>
+                                <strong>Certificate issued.</strong>
+                                The public CA validates and returns the certificate as usual. Every request lands in the audit log: who, when, which credential, which CA, which policy.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="architecture-legend-num">04</span>
+                            <div>
+                                <strong>CT watch.</strong>
+                                Discovery streams Certificate Transparency logs in parallel. Anything issued for your domains that bypassed the gate becomes a case for an admin.
+                            </div>
+                        </li>
+                    </ol>
+                </figcaption>
+            </figure>
         </div>
     </section>
 
@@ -318,11 +498,11 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Stop Certificate Chaos?</h2>
-                <p>Join enterprise teams who use AcmeGuard to control ACME protocol usage, secure internal services, and discover unknown certificates.</p>
+                <h2>Ready to govern every certificate?</h2>
+                <p>Twenty minutes, your domains, no slide deck.</p>
                 <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" class="btn btn-primary btn-large" style="text-decoration: none;">
                     <i data-lucide="calendar"></i>
-                    Schedule Your Demo
+                    Book a demo
                 </a>
             </div>
         </div>
@@ -337,31 +517,31 @@
                         <i data-lucide="shield-check"></i>
                         <span>AcmeGuard</span>
                     </div>
-                    <p>The unified certificate management platform</p>
+                    <p>Certificate governance that actually works.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4>Product</h4>
                         <ul>
                             <li><a href="#features">Features</a></li>
-                            <li><a href="#use-cases">Use Cases</a></li>
-                            <li><a href="#how-it-works">How It Works</a></li>
-                            <li><a href="quiz.html">Quiz</a></li>
-                            <li><a href="why.html">Why</a></li>
+                            <li><a href="#use-cases">Use cases</a></li>
+                            <li><a href="#how-it-works">How it works</a></li>
+                            <li><a href="quiz.html">Readiness quiz</a></li>
+                            <li><a href="why.html">Why AcmeGuard</a></li>
                             <li><a href="pricing.html">Pricing</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h4>Legal</h4>
                         <ul>
-                            <li><a href="privacy.html">Privacy Policy</a></li>
-                            <li><a href="mailto:privacy@acmeguard.io">Data Protection</a></li>
+                            <li><a href="privacy.html">Privacy</a></li>
+                            <li><a href="mailto:privacy@acmeguard.io">Data protection</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h4>Contact</h4>
                         <ul>
-                            <li><a href="mailto:sales@acmeguard.io">Get in Touch</a></li>
+                            <li><a href="mailto:sales@acmeguard.io">Get in touch</a></li>
                         </ul>
                     </div>
                 </div>
@@ -374,7 +554,7 @@
            </div>
             <div class="footer-bottom">
                 <div class="footer-legal">
-                    <p>&copy; 2025 AcmeGuard BV. All rights reserved.</p>
+                    <p>&copy; 2026 AcmeGuard BV. All rights reserved.</p>
                 </div>
                 <div class="footer-europe">
                     <span class="eu-flag">🇪🇺</span>

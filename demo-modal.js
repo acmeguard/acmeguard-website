@@ -35,79 +35,79 @@ class AcmeGuardDemo {
             <div class="modal fade-in">
                 <div class="modal-content">
                     <button class="modal-close" onclick="acmeGuardDemo.closeDemoModal()">&times;</button>
-                    <h2>Book Your AcmeGuard Demo</h2>
+                    <h2>Book a demo</h2>
                     <p style="color: var(--text-secondary); margin-bottom: var(--space-xl);">
-                        See how AcmeGuard can centralize your ACME protocol usage and secure private infrastructure. 
-                        Schedule a demo directly, send us your information, or email us at <a href="mailto:sales@acmeguard.io" style="color: var(--primary);">sales@acmeguard.io</a>.
+                        Twenty minutes, your domains, no slide deck. Pick a slot directly,
+                        send us your details, or email <a href="mailto:sales@acmeguard.io" style="color: var(--primary);">sales@acmeguard.io</a>.
                     </p>
-                    
+
                     <form id="demo-form" onsubmit="acmeGuardDemo.submitDemoForm(event)">
                         <div class="form-group">
-                            <label class="form-label" for="name">Full Name *</label>
+                            <label class="form-label" for="name">Full name *</label>
                             <input class="form-input" type="text" id="name" name="name" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label class="form-label" for="email">Work Email *</label>
+                            <label class="form-label" for="email">Work email *</label>
                             <input class="form-input" type="email" id="email" name="email" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label class="form-label" for="company">Company Name *</label>
+                            <label class="form-label" for="company">Company *</label>
                             <input class="form-input" type="text" id="company" name="company" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label class="form-label" for="role">Job Title</label>
-                            <input class="form-input" type="text" id="role" name="role" placeholder="e.g., IT Manager, Security Engineer">
+                            <label class="form-label" for="role">Role</label>
+                            <input class="form-input" type="text" id="role" name="role" placeholder="e.g. IT manager, security engineer">
                         </div>
-                        
+
                         <div class="form-group">
-                            <label class="form-label" for="company-size">Company Size</label>
+                            <label class="form-label" for="company-size">Company size</label>
                             <select class="form-select" id="company-size" name="company-size">
-                                <option value="">Select...</option>
-                                <option value="1-50">1-50 employees</option>
-                                <option value="51-200">51-200 employees</option>
-                                <option value="201-1000">201-1000 employees</option>
-                                <option value="1000+">1000+ employees</option>
+                                <option value="">Select…</option>
+                                <option value="1-50">1–50 employees</option>
+                                <option value="51-200">51–200 employees</option>
+                                <option value="201-1000">201–1,000 employees</option>
+                                <option value="1000+">1,000+ employees</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label class="form-label" for="use-case">Primary Use Case</label>
+                            <label class="form-label" for="use-case">Primary use case</label>
                             <select class="form-select" id="use-case" name="use-case">
-                                <option value="">Select...</option>
-                                <option value="acme-governance">ACME protocol governance & control</option>
+                                <option value="">Select…</option>
+                                <option value="acme-governance">ACME governance &amp; control</option>
                                 <option value="private-network">Secure private infrastructure</option>
                                 <option value="cost-effective">Cost-effective ACME management</option>
-                                <option value="compliance">Enterprise compliance & governance</option>
+                                <option value="compliance">Compliance &amp; audit reporting</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label class="form-label" for="current-solution">Current Certificate Management</label>
-                            <textarea class="form-textarea" id="current-solution" name="current-solution" 
-                                placeholder="Tell us about your current certificate management approach (optional)"></textarea>
+                            <label class="form-label" for="current-solution">Current setup</label>
+                            <textarea class="form-textarea" id="current-solution" name="current-solution"
+                                placeholder="How are you managing certificates today? (optional)"></textarea>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label class="form-label" for="message">Additional Information</label>
-                            <textarea class="form-textarea" id="message" name="message" 
-                                placeholder="Any specific questions or requirements? (optional)"></textarea>
+                            <label class="form-label" for="message">Anything else</label>
+                            <textarea class="form-textarea" id="message" name="message"
+                                placeholder="Specific questions or requirements? (optional)"></textarea>
                         </div>
-                        
+
                         <div style="display: flex; gap: var(--space-md); justify-content: flex-end; margin-top: var(--space-xl);">
                             <button type="button" class="btn btn-secondary" onclick="acmeGuardDemo.closeDemoModal()">
                                 Cancel
                             </button>
                             <button type="submit" class="btn btn-primary">
                                 <i data-lucide="send"></i>
-                                Send Information
+                                Send details
                             </button>
                             <a href="https://calendly.com/juanfontalonso/acmeguard-demo" target="_blank" class="btn btn-primary" style="text-decoration: none;">
                                 <i data-lucide="calendar"></i>
-                                Schedule Demo Now
+                                Pick a time
                             </a>
                         </div>
                     </form>
@@ -186,40 +186,39 @@ class AcmeGuardDemo {
             <div class="modal fade-in">
                 <div class="modal-content text-center">
                     <button class="modal-close" onclick="acmeGuardDemo.closeDemoModal()">&times;</button>
-                    
+
                     <div style="margin-bottom: var(--space-xl);">
-                        <div style="width: 80px; height: 80px; background: var(--accent); border-radius: 50%; 
-                                    display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-lg);">
-                            <i data-lucide="check" style="width: 40px; height: 40px; color: white;"></i>
+                        <div style="width: 44px; height: 44px; background: color-mix(in oklch, var(--success) 14%, transparent); border: 1px solid color-mix(in oklch, var(--success) 30%, transparent); border-radius: var(--radius-sm);
+                                    display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-lg); color: var(--success);">
+                            <i data-lucide="check" style="width: 22px; height: 22px;"></i>
                         </div>
-                        <h2 style="color: var(--accent); margin-bottom: var(--space-md);">Demo Request Received!</h2>
-                        <p style="color: var(--text-secondary); font-size: 1.1rem;">
-                            Thank you, ${data.name}! We've received your demo request for <strong>${data.company}</strong>.
+                        <h2 style="margin-bottom: var(--space-md);">Got it. Thanks, ${data.name}.</h2>
+                        <p style="color: var(--text-secondary); font-size: 1rem;">
+                            Your details for <strong>${data.company}</strong> are with us.
                         </p>
                     </div>
-                    
-                    <div style="background: var(--surface); padding: var(--space-xl); border-radius: 0.75rem; margin-bottom: var(--space-xl);">
-                        <h3 style="margin-bottom: var(--space-md);">What's Next?</h3>
-                                                 <ul style="text-align: left; color: var(--text-secondary); list-style: none;">
-                             <li style="padding: var(--space-sm) 0; position: relative; padding-left: var(--space-lg);">
-                                 <span style="position: absolute; left: 0; color: var(--accent); font-weight: 600;">1.</span>
-                                 Our team will review your requirements
-                             </li>
-                             <li style="padding: var(--space-sm) 0; position: relative; padding-left: var(--space-lg);">
-                                 <span style="position: absolute; left: 0; color: var(--accent); font-weight: 600;">2.</span>
-                                 We'll reach out within 24 hours to schedule your demo
-                             </li>
-                             <li style="padding: var(--space-sm) 0; position: relative; padding-left: var(--space-lg);">
-                                 <span style="position: absolute; left: 0; color: var(--accent); font-weight: 600;">3.</span>
-                                 Or <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" style="color: var(--primary);">schedule directly</a> or email <a href="mailto:sales@acmeguard.io" style="color: var(--primary);">sales@acmeguard.io</a>
-                             </li>
-                         </ul>
+
+                    <div style="background: var(--surface); padding: var(--space-xl); border-radius: var(--radius-md); border: 1px solid var(--border); margin-bottom: var(--space-xl); text-align: left;">
+                        <p class="eyebrow">What happens next</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: var(--space-xs) 0; position: relative; padding-left: var(--space-lg); color: var(--text-primary);">
+                                <span style="position: absolute; left: 0; color: var(--primary); font-family: var(--font-mono); font-weight: 600;">›</span>
+                                We review your details and use case
+                            </li>
+                            <li style="padding: var(--space-xs) 0; position: relative; padding-left: var(--space-lg); color: var(--text-primary);">
+                                <span style="position: absolute; left: 0; color: var(--primary); font-family: var(--font-mono); font-weight: 600;">›</span>
+                                We reach out within 24 hours to find a slot
+                            </li>
+                            <li style="padding: var(--space-xs) 0; position: relative; padding-left: var(--space-lg); color: var(--text-primary);">
+                                <span style="position: absolute; left: 0; color: var(--primary); font-family: var(--font-mono); font-weight: 600;">›</span>
+                                Or <a href="https://calendly.com/acmeguard/acmeguard-demo" target="_blank" style="color: var(--primary);">pick a time directly</a> or email <a href="mailto:sales@acmeguard.io" style="color: var(--primary);">sales@acmeguard.io</a>
+                            </li>
+                        </ul>
                     </div>
-                    
+
                     <div>
                         <button class="btn btn-primary" onclick="acmeGuardDemo.closeDemoModal()">
-                            <i data-lucide="thumbs-up"></i>
-                            Got it, thanks!
+                            Close
                         </button>
                     </div>
                 </div>
@@ -235,22 +234,22 @@ class AcmeGuardDemo {
             <div class="modal fade-in">
                 <div class="modal-content text-center">
                     <button class="modal-close" onclick="acmeGuardDemo.closeDemoModal()">&times;</button>
-                    
+
                     <div style="margin-bottom: var(--space-xl);">
-                        <div style="width: 80px; height: 80px; background: var(--danger); border-radius: 50%; 
-                                    display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-lg);">
-                            <i data-lucide="x" style="width: 40px; height: 40px; color: white;"></i>
+                        <div style="width: 44px; height: 44px; background: color-mix(in oklch, var(--danger) 14%, transparent); border: 1px solid color-mix(in oklch, var(--danger) 30%, transparent); border-radius: var(--radius-sm);
+                                    display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-lg); color: var(--danger);">
+                            <i data-lucide="x" style="width: 22px; height: 22px;"></i>
                         </div>
-                        <h2 style="color: var(--danger); margin-bottom: var(--space-md);">Something went wrong</h2>
+                        <h2 style="margin-bottom: var(--space-md);">Something went wrong</h2>
                         <p style="color: var(--text-secondary);">
-                            We couldn't submit your demo request. Please try again or contact us directly.
+                            We couldn't submit your details. Try again, or email <a href="mailto:sales@acmeguard.io" style="color: var(--primary);">sales@acmeguard.io</a>.
                         </p>
                     </div>
-                    
+
                     <div style="display: flex; gap: var(--space-md); justify-content: center;">
                         <button class="btn btn-secondary" onclick="acmeGuardDemo.showDemoModal()">
                             <i data-lucide="rotate-ccw"></i>
-                            Try Again
+                            Try again
                         </button>
                         <button class="btn btn-primary" onclick="acmeGuardDemo.closeDemoModal()">
                             Close
